@@ -16,9 +16,12 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
     }
-// MARK: - Functions and Actions
 
     func getData() {
+        
+    }
+    
+    func moveData() {
         
     }
 }
