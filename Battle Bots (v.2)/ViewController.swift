@@ -8,12 +8,15 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+// MARK: - Outlets, Constants, and Variables
+    
+    
+// MARK: - viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
     }
-
+// MARK: - Functions and Actions
 
 }
 
