@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1C78230AA5F3442887D1B103 /* Pods_Battle_Bots__v_2_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D549B7932A117F89C887F66 /* Pods_Battle_Bots__v_2_.framework */; };
+		3D975B3227A303D3004711CA /* Tournament.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D975B3127A303D3004711CA /* Tournament.swift */; };
 		B67AC1E827A0677100018E83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67AC1E727A0677100018E83 /* AppDelegate.swift */; };
 		B67AC1EA27A0677100018E83 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67AC1E927A0677100018E83 /* SceneDelegate.swift */; };
 		B67AC1EC27A0677100018E83 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67AC1EB27A0677100018E83 /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		0D549B7932A117F89C887F66 /* Pods_Battle_Bots__v_2_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Battle_Bots__v_2_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D975B3127A303D3004711CA /* Tournament.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tournament.swift; sourceTree = "<group>"; };
 		8AC4F392871DB5C928596D54 /* Pods-Battle Bots (v.2).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Battle Bots (v.2).release.xcconfig"; path = "Target Support Files/Pods-Battle Bots (v.2)/Pods-Battle Bots (v.2).release.xcconfig"; sourceTree = "<group>"; };
 		B67AC1E427A0677100018E83 /* Battle Bots (v.2).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Battle Bots (v.2).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B67AC1E727A0677100018E83 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				B67AC1E927A0677100018E83 /* SceneDelegate.swift */,
 				B67AC1EB27A0677100018E83 /* ViewController.swift */,
 				B67AC1ED27A0677100018E83 /* Main.storyboard */,
+				3D975B3127A303D3004711CA /* Tournament.swift */,
 				B67AC1F027A0677300018E83 /* Assets.xcassets */,
 				B67AC1F227A0677300018E83 /* LaunchScreen.storyboard */,
 				B67AC1F527A0677300018E83 /* Info.plist */,
@@ -210,6 +213,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D975B3227A303D3004711CA /* Tournament.swift in Sources */,
 				B67AC1EC27A0677100018E83 /* ViewController.swift in Sources */,
 				B67AC1E827A0677100018E83 /* AppDelegate.swift in Sources */,
 				B67AC1EA27A0677100018E83 /* SceneDelegate.swift in Sources */,
