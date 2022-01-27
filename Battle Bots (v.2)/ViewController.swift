@@ -9,16 +9,21 @@ import Firebase
 import UIKit
 
 class ViewController: UIViewController {
+// MARK: - Outlets, Constants, and Variables
 
     let database = Database.database().reference().child("Tournament")
     
+// MARK: - viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         
     }
-
-    func getData() {
-        
+// MARK: - Functions and Actions
+    func confirm() {
+        let alert = UIAlertController(title: "Confirm", message: "Do You Wish to Proceed?", preferredStyle: UIAlertController.Style.alert)
+        let yes = UIAlertAction(title: "Yes", style: .default, handler: nil)
+        alert.addAction(yes)
+        present(alert, animated: true, completion: nil)
     }
     
     func moveData() {
