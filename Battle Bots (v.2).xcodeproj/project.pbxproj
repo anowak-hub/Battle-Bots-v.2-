@@ -67,11 +67,11 @@
 		B67AC1E627A0677100018E83 /* Battle Bots (v.2) */ = {
 			isa = PBXGroup;
 			children = (
+				3D975B3127A303D3004711CA /* Tournament.swift */,
 				B67AC1E727A0677100018E83 /* AppDelegate.swift */,
 				B67AC1E927A0677100018E83 /* SceneDelegate.swift */,
 				B67AC1EB27A0677100018E83 /* ViewController.swift */,
 				B67AC1ED27A0677100018E83 /* Main.storyboard */,
-				3D975B3127A303D3004711CA /* Tournament.swift */,
 				B67AC1F027A0677300018E83 /* Assets.xcassets */,
 				B67AC1F227A0677300018E83 /* LaunchScreen.storyboard */,
 				B67AC1F527A0677300018E83 /* Info.plist */,
