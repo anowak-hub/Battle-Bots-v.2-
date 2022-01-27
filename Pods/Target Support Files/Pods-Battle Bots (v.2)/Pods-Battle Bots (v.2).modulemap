@@ -1,0 +1,6 @@
+framework module Pods_Battle_Bots__v_2_ {
+  umbrella header "Pods-Battle Bots (v.2)-umbrella.h"
+
+  export *
+  module * { export * }
+}

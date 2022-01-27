@@ -7,15 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C78230AA5F3442887D1B103 /* Pods_Battle_Bots__v_2_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D549B7932A117F89C887F66 /* Pods_Battle_Bots__v_2_.framework */; };
 		B67AC1E827A0677100018E83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67AC1E727A0677100018E83 /* AppDelegate.swift */; };
 		B67AC1EA27A0677100018E83 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67AC1E927A0677100018E83 /* SceneDelegate.swift */; };
 		B67AC1EC27A0677100018E83 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67AC1EB27A0677100018E83 /* ViewController.swift */; };
 		B67AC1EF27A0677100018E83 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B67AC1ED27A0677100018E83 /* Main.storyboard */; };
 		B67AC1F127A0677300018E83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B67AC1F027A0677300018E83 /* Assets.xcassets */; };
 		B67AC1F427A0677300018E83 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B67AC1F227A0677300018E83 /* LaunchScreen.storyboard */; };
+		B67AC1FC27A069DC00018E83 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B67AC1FB27A069DC00018E83 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0D549B7932A117F89C887F66 /* Pods_Battle_Bots__v_2_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Battle_Bots__v_2_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8AC4F392871DB5C928596D54 /* Pods-Battle Bots (v.2).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Battle Bots (v.2).release.xcconfig"; path = "Target Support Files/Pods-Battle Bots (v.2)/Pods-Battle Bots (v.2).release.xcconfig"; sourceTree = "<group>"; };
 		B67AC1E427A0677100018E83 /* Battle Bots (v.2).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Battle Bots (v.2).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B67AC1E727A0677100018E83 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B67AC1E927A0677100018E83 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +28,8 @@
 		B67AC1F027A0677300018E83 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B67AC1F327A0677300018E83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B67AC1F527A0677300018E83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B67AC1FB27A069DC00018E83 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E3AAA44101E4119C23484153 /* Pods-Battle Bots (v.2).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Battle Bots (v.2).debug.xcconfig"; path = "Target Support Files/Pods-Battle Bots (v.2)/Pods-Battle Bots (v.2).debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C78230AA5F3442887D1B103 /* Pods_Battle_Bots__v_2_.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +49,8 @@
 			children = (
 				B67AC1E627A0677100018E83 /* Battle Bots (v.2) */,
 				B67AC1E527A0677100018E83 /* Products */,
+				FA625ECE98C180E78A672A57 /* Pods */,
+				DFFAAF21D3D71513C76CD52B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,8 +72,26 @@
 				B67AC1F027A0677300018E83 /* Assets.xcassets */,
 				B67AC1F227A0677300018E83 /* LaunchScreen.storyboard */,
 				B67AC1F527A0677300018E83 /* Info.plist */,
+				B67AC1FB27A069DC00018E83 /* GoogleService-Info.plist */,
 			);
 			path = "Battle Bots (v.2)";
+			sourceTree = "<group>";
+		};
+		DFFAAF21D3D71513C76CD52B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0D549B7932A117F89C887F66 /* Pods_Battle_Bots__v_2_.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FA625ECE98C180E78A672A57 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E3AAA44101E4119C23484153 /* Pods-Battle Bots (v.2).debug.xcconfig */,
+				8AC4F392871DB5C928596D54 /* Pods-Battle Bots (v.2).release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +101,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B67AC1F827A0677300018E83 /* Build configuration list for PBXNativeTarget "Battle Bots (v.2)" */;
 			buildPhases = (
+				91EBAB96E6D646912586DB3D /* [CP] Check Pods Manifest.lock */,
 				B67AC1E027A0677100018E83 /* Sources */,
 				B67AC1E127A0677100018E83 /* Frameworks */,
 				B67AC1E227A0677100018E83 /* Resources */,
+				D09F504AE2C47273ACCCEDD3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -126,12 +155,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				B67AC1F427A0677300018E83 /* LaunchScreen.storyboard in Resources */,
+				B67AC1FC27A069DC00018E83 /* GoogleService-Info.plist in Resources */,
 				B67AC1F127A0677300018E83 /* Assets.xcassets in Resources */,
 				B67AC1EF27A0677100018E83 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		91EBAB96E6D646912586DB3D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Battle Bots (v.2)-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D09F504AE2C47273ACCCEDD3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Battle Bots (v.2)/Pods-Battle Bots (v.2)-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Battle Bots (v.2)/Pods-Battle Bots (v.2)-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Battle Bots (v.2)/Pods-Battle Bots (v.2)-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B67AC1E027A0677100018E83 /* Sources */ = {
@@ -284,6 +356,7 @@
 		};
 		B67AC1F927A0677300018E83 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E3AAA44101E4119C23484153 /* Pods-Battle Bots (v.2).debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -311,6 +384,7 @@
 		};
 		B67AC1FA27A0677300018E83 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8AC4F392871DB5C928596D54 /* Pods-Battle Bots (v.2).release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
