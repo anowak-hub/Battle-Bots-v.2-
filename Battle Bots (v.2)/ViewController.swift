@@ -10,8 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
 // MARK: - Outlets, Constants, and Variables
-    var tournament = Tournament()
-    var tournamentTeams = Tournament().teams
+    var tournament = [Tournament()]
+    
     
     let database = Database.database().reference().child("Tournament")
     
