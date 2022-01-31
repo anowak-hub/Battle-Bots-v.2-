@@ -22,12 +22,12 @@ class Tournament {
         
         
     }
-    init(colors: [String], teamNames: [String], teams: [:], playerNames: [String], winners: [String]){
-        teams = [teamNames: colors]
-        playerNames = playerNames.self
-        winners = winners.self
-        teamNames = teamNames.self
-        colors = colors.self
+    init(colors: [String], teamNames: [String], teams: [[String]: [String]], playerNames: [String], winners: [String]){
+        self.teams = [teamNames: colors]
+        self.playerNames = playerNames
+        self.winners = winners
+        self.teamNames = teamNames
+        self.colors = colors
     }
     
 }
