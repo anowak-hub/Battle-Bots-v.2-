@@ -11,9 +11,10 @@ import Firebase
 
 class Tournament(){
     
-    var colors: [String] = []
+    var colors: [String]= []
+    var teamNames: [String]= []
+    var teams: [[String],[String]] = [teamNames,colors]
     var playerNames: [String] = []
-    var teamNames: [String] = []
     var winners: [String] = []
 
 }

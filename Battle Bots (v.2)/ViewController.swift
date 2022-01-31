@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
 // MARK: - Outlets, Constants, and Variables
-
+    var tournamentTeams =
     let database = Database.database().reference().child("Tournament")
     
 // MARK: - viewDidLoad
