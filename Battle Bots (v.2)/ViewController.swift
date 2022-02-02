@@ -32,5 +32,10 @@ class ViewController: UIViewController {
         
     }
     
+    func getData() {
+        
+        
+    }
+    
 }
 
