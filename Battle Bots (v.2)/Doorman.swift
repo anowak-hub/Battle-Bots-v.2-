@@ -9,7 +9,7 @@ import UIKit
 
 class Doorman: UIViewController, UITableViewDelegate, UITableViewDataSource {
 // MARK: - Create any necessary variables
-    var competitors: [String: String] = [:]
+    var competitors: [[String] : [String]] = [:]
     @IBOutlet weak var doorTableView: UITableView!
     //Variables below represent the two selected teams that will compete (store competing team names here)
     var compTeam1: String = ""
@@ -24,7 +24,7 @@ class Doorman: UIViewController, UITableViewDelegate, UITableViewDataSource {
 // MARK: - Write any necessary functions
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
+        return competitors.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -38,4 +38,10 @@ class Doorman: UIViewController, UITableViewDelegate, UITableViewDataSource {
         present(alert, animated: true, completion: nil)
     }
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            
+        }
+        doorTableView.reloadData()
+    }
 }
