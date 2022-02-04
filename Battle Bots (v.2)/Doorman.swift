@@ -23,5 +23,11 @@ class Doorman: UIViewController {
     }
 // MARK: - Write any necessary functions
     
+    func confirm() {
+        let alert = UIAlertController(title: "Confirm", message: "Do You Wish to Proceed?", preferredStyle: UIAlertController.Style.alert)
+        let yes = UIAlertAction(title: "Yes", style: .default, handler: nil)
+        alert.addAction(yes)
+        present(alert, animated: true, completion: nil)
+    }
     
 }
