@@ -13,15 +13,16 @@ class Tournament {
     
     var colors: [String] = []
     var teamNames: [String] = []
-    var teams: [[String]: [String]] = [:]
+    var teams: [[String] : [String]] = [:]
     var playerNames: [String] = []
     var winners: [String] = []
 
     
-    init(){
+    init() {
         
         
     }
+    
     init(colors: [String], teamNames: [String], teams: [[String]: [String]], playerNames: [String], winners: [String]){
         self.teams = [teamNames: colors]
         self.playerNames = playerNames
