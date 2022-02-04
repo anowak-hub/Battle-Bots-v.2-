@@ -15,10 +15,9 @@ class Doorman: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var compTeam2: String = ""
     
 //MARK: - viewDidLoad
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
     }
 // MARK: - Write any necessary functions
     
