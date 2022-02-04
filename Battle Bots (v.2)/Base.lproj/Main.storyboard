@@ -49,7 +49,45 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0tv-LL-tp8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2641" y="82"/>
+            <point key="canvasLocation" x="2726" y="82"/>
+        </scene>
+        <!--Doorman-->
+        <scene sceneID="V4s-HG-Ztu">
+            <objects>
+                <viewController id="y29-Wu-tw9" customClass="Doorman" customModule="Battle_Bots__v_2_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="E1V-7K-505">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Axz-tN-uex">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="doorCell" id="gJY-YB-Gal">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gJY-YB-Gal" id="oHs-eL-KHc">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="GRR-NZ-7lC"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="GRR-NZ-7lC" firstAttribute="trailing" secondItem="Axz-tN-uex" secondAttribute="trailing" id="cJP-25-vYd"/>
+                            <constraint firstItem="GRR-NZ-7lC" firstAttribute="bottom" secondItem="Axz-tN-uex" secondAttribute="bottom" id="jZ8-he-FGC"/>
+                            <constraint firstItem="Axz-tN-uex" firstAttribute="leading" secondItem="GRR-NZ-7lC" secondAttribute="leading" id="qLe-IY-uWA"/>
+                            <constraint firstItem="Axz-tN-uex" firstAttribute="top" secondItem="GRR-NZ-7lC" secondAttribute="top" id="rjR-m6-gVK"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Doorman" image="tray.2" catalog="system" id="KUg-Ns-xgS"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lz1-bk-0lU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3572" y="82"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="LOq-d0-lRq">
@@ -83,6 +121,7 @@
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="lGK-nm-EyJ"/>
                         <segue destination="Rjd-2Y-vjm" kind="relationship" relationship="viewControllers" id="AUZ-5k-mAg"/>
+                        <segue destination="y29-Wu-tw9" kind="relationship" relationship="viewControllers" id="b7U-Ib-dUj"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aMv-xx-zPb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -95,6 +134,7 @@
         <image name="book.closed.fill" catalog="system" width="115" height="128"/>
         <image name="credits2" width="960" height="720"/>
         <image name="eyeglasses" catalog="system" width="128" height="54"/>
+        <image name="tray.2" catalog="system" width="128" height="114"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
