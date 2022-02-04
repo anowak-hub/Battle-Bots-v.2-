@@ -10,6 +10,7 @@ import UIKit
 class Doorman: UIViewController, UITableViewDelegate, UITableViewDataSource {
 // MARK: - Create any necessary variables
     var competitors: [String: String] = [:]
+    @IBOutlet weak var doorTableView: UITableView!
     //Variables below represent the two selected teams that will compete (store competing team names here)
     var compTeam1: String = ""
     var compTeam2: String = ""
@@ -17,7 +18,8 @@ class Doorman: UIViewController, UITableViewDelegate, UITableViewDataSource {
 //MARK: - viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        doorTableView.dataSource = self
+        doorTableView.delegate = self
     }
 // MARK: - Write any necessary functions
     
