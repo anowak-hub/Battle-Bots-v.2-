@@ -11,6 +11,7 @@ class Doorman: UIViewController {
 
 // MARK: - Create any necessary variables
     var competitors: [String: String] = [:]
+    //Variables below represent the two selected teams that will compete (store competing team names here)
     var compTeam1: String = ""
     var compTeam2: String = ""
     
