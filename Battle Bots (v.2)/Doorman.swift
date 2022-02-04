@@ -9,9 +9,18 @@ import UIKit
 
 class Doorman: UIViewController {
 
+// MARK: - Create any necessary variables
+    var competitors: [String: String] = [:]
+    var compTeam1 = String
+    var compTeam2 = String
+    
+//MARK: - viewDidLoad
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
     }
+// MARK: - Write any necessary functions
+    
     
 }
