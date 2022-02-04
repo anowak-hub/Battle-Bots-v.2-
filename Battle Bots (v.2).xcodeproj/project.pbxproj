@@ -11,6 +11,7 @@
 		3D975B3227A303D3004711CA /* Tournament.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D975B3127A303D3004711CA /* Tournament.swift */; };
 		5D05F3A027AD886700CEC4E2 /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D05F39F27AD886600CEC4E2 /* Media.swift */; };
 		5D05F3A227AD899E00CEC4E2 /* Doorman.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D05F3A127AD899E00CEC4E2 /* Doorman.swift */; };
+		5D05F3A427AD8C6900CEC4E2 /* Judge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D05F3A327AD8C6900CEC4E2 /* Judge.swift */; };
 		B67AC1E827A0677100018E83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67AC1E727A0677100018E83 /* AppDelegate.swift */; };
 		B67AC1EA27A0677100018E83 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67AC1E927A0677100018E83 /* SceneDelegate.swift */; };
 		B67AC1EC27A0677100018E83 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67AC1EB27A0677100018E83 /* ViewController.swift */; };
@@ -25,6 +26,7 @@
 		3D975B3127A303D3004711CA /* Tournament.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tournament.swift; sourceTree = "<group>"; };
 		5D05F39F27AD886600CEC4E2 /* Media.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
 		5D05F3A127AD899E00CEC4E2 /* Doorman.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Doorman.swift; sourceTree = "<group>"; };
+		5D05F3A327AD8C6900CEC4E2 /* Judge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Judge.swift; sourceTree = "<group>"; };
 		8AC4F392871DB5C928596D54 /* Pods-Battle Bots (v.2).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Battle Bots (v.2).release.xcconfig"; path = "Target Support Files/Pods-Battle Bots (v.2)/Pods-Battle Bots (v.2).release.xcconfig"; sourceTree = "<group>"; };
 		B67AC1E427A0677100018E83 /* Battle Bots (v.2).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Battle Bots (v.2).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B67AC1E727A0677100018E83 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 				B67AC1EB27A0677100018E83 /* ViewController.swift */,
 				5D05F39F27AD886600CEC4E2 /* Media.swift */,
 				5D05F3A127AD899E00CEC4E2 /* Doorman.swift */,
+				5D05F3A327AD8C6900CEC4E2 /* Judge.swift */,
 				B67AC1ED27A0677100018E83 /* Main.storyboard */,
 				B67AC1F027A0677300018E83 /* Assets.xcassets */,
 				B67AC1F227A0677300018E83 /* LaunchScreen.storyboard */,
@@ -225,6 +228,7 @@
 				B67AC1EA27A0677100018E83 /* SceneDelegate.swift in Sources */,
 				5D05F3A227AD899E00CEC4E2 /* Doorman.swift in Sources */,
 				5D05F3A027AD886700CEC4E2 /* Media.swift in Sources */,
+				5D05F3A427AD8C6900CEC4E2 /* Judge.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
