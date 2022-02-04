@@ -21,12 +21,20 @@ class Doorman: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     }
 // MARK: - Write any necessary functions
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         <#code#>
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         <#code#>
+    }
+    
+    func confirm() {
+        let alert = UIAlertController(title: "Confirm", message: "Do You Wish to Proceed?", preferredStyle: UIAlertController.Style.alert)
+        let yes = UIAlertAction(title: "Yes", style: .default, handler: nil)
+        alert.addAction(yes)
+        present(alert, animated: true, completion: nil)
     }
     
 }
