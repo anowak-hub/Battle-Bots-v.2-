@@ -92,6 +92,22 @@
             </objects>
             <point key="canvasLocation" x="3572" y="82"/>
         </scene>
+        <!--Judge-->
+        <scene sceneID="7Nw-6E-FBQ">
+            <objects>
+                <viewController id="qay-iD-pIv" customClass="Judge" customModule="Battle_Bots__v_2_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rou-xE-nOM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="48F-EN-Mox"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Judge" image="hammer.fill" catalog="system" id="1zn-4v-OfL"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pqz-fZ-6Mo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4401" y="82"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="LOq-d0-lRq">
             <objects>
@@ -125,6 +141,7 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="lGK-nm-EyJ"/>
                         <segue destination="Rjd-2Y-vjm" kind="relationship" relationship="viewControllers" id="AUZ-5k-mAg"/>
                         <segue destination="y29-Wu-tw9" kind="relationship" relationship="viewControllers" id="b7U-Ib-dUj"/>
+                        <segue destination="qay-iD-pIv" kind="relationship" relationship="viewControllers" id="X59-sV-pTK"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aMv-xx-zPb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -137,6 +154,7 @@
         <image name="book.closed.fill" catalog="system" width="115" height="128"/>
         <image name="credits2" width="960" height="720"/>
         <image name="eyeglasses" catalog="system" width="128" height="54"/>
+        <image name="hammer.fill" catalog="system" width="128" height="117"/>
         <image name="tray.2" catalog="system" width="128" height="114"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
