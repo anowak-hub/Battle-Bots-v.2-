@@ -8,7 +8,7 @@
 import Firebase
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITabBarControllerDelegate, UITabBarDelegate {
 // MARK: - Outlets, Constants, and Variables
     var tournament = [Tournament()]
     
