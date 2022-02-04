@@ -7,8 +7,7 @@
 
 import UIKit
 
-class Doorman: UIViewController {
-
+class Doorman: UIViewController, UITableViewDelegate, UITableViewDataSource {
 // MARK: - Create any necessary variables
     var competitors: [String: String] = [:]
     //Variables below represent the two selected teams that will compete (store competing team names here)
@@ -22,6 +21,12 @@ class Doorman: UIViewController {
 
     }
 // MARK: - Write any necessary functions
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        <#code#>
+    }
     
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        <#code#>
+    }
     
 }
