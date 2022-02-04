@@ -23,7 +23,7 @@ class ViewController: UIViewController, UITabBarControllerDelegate, UITabBarDele
 // MARK: - Functions and Actions
 
     func moveData() {
-        
+        database.setValue(tournament)
     }
     
     func getData() {
