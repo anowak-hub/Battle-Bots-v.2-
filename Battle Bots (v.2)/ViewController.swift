@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController, UITabBarControllerDelegate, UITabBarDelegate {
 // MARK: - Outlets, Constants, and Variables
     var tournament = Tournament()
+    var competition = [Tournament()]
     
     let database = Database.database().reference().child("Tournament")
     
@@ -22,12 +23,22 @@ class ViewController: UIViewController, UITabBarControllerDelegate, UITabBarDele
     }
 // MARK: - Functions and Actions
 
-    func moveData() {
+    public func moveData() {
         database.setValue(tournament.teamNames)
     }
     
-    func getData() {
-        
+    public func getData() {
+        tournament.teamNames = []
+        tournament.colors = []
+        database.observeSingleEvent(of: .value) { snapshot in
+            for data in snapshot.children.allObjects as! [DataSnapshot] {
+                let color = data.value
+                let name = data.key
+                self.tournament.teamNames.append(name)
+                self.tournament.colors.append("\(String(describing: color))")
+                self.competition.append(self.tournament)
+            }
+        }
         
     }
     
