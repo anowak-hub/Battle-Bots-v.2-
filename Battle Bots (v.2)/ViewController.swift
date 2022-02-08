@@ -10,8 +10,7 @@ import UIKit
 
 class ViewController: UIViewController, UITabBarControllerDelegate, UITabBarDelegate {
 // MARK: - Outlets, Constants, and Variables
-    var tournament = [Tournament()]
-    
+    var tournament = Tournament()
     
     let database = Database.database().reference().child("Tournament")
     
@@ -24,7 +23,8 @@ class ViewController: UIViewController, UITabBarControllerDelegate, UITabBarDele
 // MARK: - Functions and Actions
 
     func moveData() {
-        database.setValue(tournament)
+        self.tournament.teamNames.append("JohnHersey")
+        database.setValue(tournament.teamNames)
     }
     
     func getData() {
