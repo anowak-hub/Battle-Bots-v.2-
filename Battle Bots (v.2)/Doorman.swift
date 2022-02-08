@@ -14,9 +14,6 @@ class Doorman: UIViewController, UITableViewDelegate, UITableViewDataSource {
     //Variables below represent the two selected teams that will compete (store competing team names here)
     var compTeam1: String = ""
     var compTeam2: String = ""
-    @IBOutlet weak var doorTableView: UITableView!
-    //Variables below represent the two selected teams that will compete (store competing team names here)
-    
 //MARK: - viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
