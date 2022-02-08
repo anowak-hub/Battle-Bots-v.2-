@@ -27,7 +27,9 @@ class Doorman: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        let cell = tableView.dequeueReusableCell(withIdentifier: "doorCell", for: indexPath)
+        
+        return cell
     }
     
     func confirm() {
