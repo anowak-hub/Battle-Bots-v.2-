@@ -9,12 +9,11 @@ import UIKit
 
 class Doorman: UIViewController, UITableViewDelegate, UITableViewDataSource {
 // MARK: - Create any necessary variables
-    var competitors: [[String] : [String]] = [:]
-    var compTeam1: String = ""
-    var compTeam2: String = ""
+    var competitors: [String] = []
     @IBOutlet weak var doorTableView: UITableView!
     //Variables below represent the two selected teams that will compete (store competing team names here)
-    
+    var compTeam1: String = ""
+    var compTeam2: String = ""
 //MARK: - viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +27,9 @@ class Doorman: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        let cell = tableView.dequeueReusableCell(withIdentifier: "doorCell", for: indexPath)
+        
+        return cell
     }
     
     func confirm() {
@@ -40,8 +41,13 @@ class Doorman: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            
+            competitors.remove(at: indexPath.row)
+            getData()
         }
         doorTableView.reloadData()
+    }
+    
+    func getData() {
+        
     }
 }
