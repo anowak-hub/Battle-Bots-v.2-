@@ -11,9 +11,10 @@ import UIKit
 class ViewController: UIViewController, UITabBarControllerDelegate, UITabBarDelegate {
 // MARK: - Outlets, Constants, and Variables
     var tournament = [Tournament()]
-    
+    var currentTeams = Tournament().teams
     
     let database = Database.database().reference().child("Tournament")
+    
     
 // MARK: - viewDidLoad
     override func viewDidLoad() {
