@@ -8,10 +8,17 @@
 import UIKit
 
 class Media: UIViewController {
-
+// MARK: - Outlets, Variables, and Constants
+    
+    @IBOutlet weak var team1label: UILabel!
+    
+    @IBOutlet weak var team2label: UILabel!
+    
+// MARK: - viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
 
     }
+// MARK: - Functions and Actions
     
 }
