@@ -23,7 +23,6 @@ class ViewController: UIViewController, UITabBarControllerDelegate, UITabBarDele
 // MARK: - Functions and Actions
 
     func moveData() {
-        self.tournament.teamNames.append("JohnHersey")
         database.setValue(tournament.teamNames)
     }
     
