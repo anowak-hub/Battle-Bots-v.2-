@@ -8,13 +8,14 @@
 import UIKit
 
 class Media: UIViewController {
-
+// MARK: - Outlets, Variables, and Constants
     
     
-    
+// MARK: - viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
 
     }
+// MARK: - Functions and Actions
     
 }
