@@ -11,11 +11,11 @@ import Firebase
 
 class Tournament {
     
-    var colors: [String] = []
-    var teamNames: [String] = []
-    var teams: [[String] : [String]] = [:]
-    var playerNames: [String] = []
-    var winners: [String] = []
+    var color: String = ""
+    var teamName: String = ""
+    var team: [String : String] = [:]
+    var playerName: String = ""
+    var winner: String = ""
 
     
     init() {
@@ -23,12 +23,12 @@ class Tournament {
         
     }
     
-    init(colors: [String], teamNames: [String], teams: [[String]: [String]], playerNames: [String], winners: [String]){
-        self.teams = [teamNames: colors]
-        self.playerNames = playerNames
-        self.winners = winners
-        self.teamNames = teamNames
-        self.colors = colors
+    init(color: String, teamName: String, teams: [[String]: [String]], playerName: String, winner: String){
+        self.team = [teamName: color]
+        self.playerName = playerName
+        self.winner = winner
+        self.teamName = teamName
+        self.color = color
     }
     
 }

@@ -5,15 +5,16 @@
 //  Created by Adam Cubas on 2/4/22.
 //
 
+import Firebase
 import UIKit
 
 class Doorman: UIViewController, UITableViewDelegate, UITableViewDataSource {
 // MARK: - Create any necessary variables
-    var competitors: [String] = []
+    var competitors: [Tournament] = []
     @IBOutlet weak var doorTableView: UITableView!
-    //Variables below represent the two selected teams that will compete (store competing team names here)
-    var compTeam1: String = ""
-    var compTeam2: String = ""
+    var teams : [String: String] = [:]
+    var teamsArray : [NSDictionary] = []
+    
 //MARK: - viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,12 +24,12 @@ class Doorman: UIViewController, UITableViewDelegate, UITableViewDataSource {
 // MARK: - Write any necessary functions
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return competitors.count
+        return teamsArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "doorCell", for: indexPath)
-        
+        cell.textLabel?.text = competitors[indexPath.row].teamName
         return cell
     }
     
@@ -41,10 +42,15 @@ class Doorman: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            competitors.remove(at: indexPath.row)
+            teamsArray.remove(at: indexPath.row)
             getData()
         }
         doorTableView.reloadData()
+    }
+    
+    func moveTeams() {
+        let database = Database.database().reference().child("Tournament")
+        database.setValue(teamsArray)
     }
     
     func getData() {
