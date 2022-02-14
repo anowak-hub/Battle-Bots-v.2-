@@ -11,6 +11,7 @@ class Doorman: UIViewController, UITableViewDelegate, UITableViewDataSource {
 // MARK: - Create any necessary variables
     @IBOutlet weak var doorTableView: UITableView!
     var teams : [String: String] = [:]
+    var teamsArray : [NSDictionary] = []
     
 //MARK: - viewDidLoad
     override func viewDidLoad() {
@@ -39,7 +40,7 @@ class Doorman: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            teams.remove(at: indexPath.row)
+            teamsArray.remove(at: indexPath.row)
             getData()
         }
         doorTableView.reloadData()
