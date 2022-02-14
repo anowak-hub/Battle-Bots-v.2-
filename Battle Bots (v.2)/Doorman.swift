@@ -5,6 +5,7 @@
 //  Created by Adam Cubas on 2/4/22.
 //
 
+import Firebase
 import UIKit
 
 class Doorman: UIViewController, UITableViewDelegate, UITableViewDataSource {
@@ -45,6 +46,11 @@ class Doorman: UIViewController, UITableViewDelegate, UITableViewDataSource {
             getData()
         }
         doorTableView.reloadData()
+    }
+    
+    func moveTeams() {
+        let database = Database.database().reference().child("Tournament")
+        database.setValue(teamsArray)
     }
     
     func getData() {
