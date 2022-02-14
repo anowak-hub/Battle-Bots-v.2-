@@ -39,7 +39,7 @@ class Doorman: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            competitors.remove(at: indexPath.row)
+            teams.remove(at: indexPath.row)
             getData()
         }
         doorTableView.reloadData()
