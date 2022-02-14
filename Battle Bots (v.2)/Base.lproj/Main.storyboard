@@ -191,6 +191,8 @@
                     <tabBarItem key="tabBarItem" title="Doorman" image="tray.2" catalog="system" id="KUg-Ns-xgS"/>
                     <connections>
                         <outlet property="doorTableView" destination="Axz-tN-uex" id="smu-Hb-nUW"/>
+                        <outlet property="team1selected" destination="cYQ-h7-m34" id="7Xk-ZI-cdb"/>
+                        <outlet property="team2selected" destination="dPi-ob-SU1" id="fKJ-XE-xOd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lz1-bk-0lU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

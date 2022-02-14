@@ -9,7 +9,9 @@ import Firebase
 import UIKit
 
 class Doorman: UIViewController, UITableViewDelegate, UITableViewDataSource {
-// MARK: - Create any necessary variables
+    @IBOutlet weak var team1selected: UILabel!
+    @IBOutlet weak var team2selected: UILabel!
+    // MARK: - Create any necessary variables
     var competitors: [Tournament] = []
     @IBOutlet weak var doorTableView: UITableView!
     var teams : [String: String] = [:]
