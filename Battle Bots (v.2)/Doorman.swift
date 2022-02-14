@@ -9,6 +9,7 @@ import UIKit
 
 class Doorman: UIViewController, UITableViewDelegate, UITableViewDataSource {
 // MARK: - Create any necessary variables
+    var competitors: [Tournament] = []
     @IBOutlet weak var doorTableView: UITableView!
     var teams : [String: String] = [:]
     
@@ -26,7 +27,7 @@ class Doorman: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "doorCell", for: indexPath)
-        
+        cell.textLabel?.text = competitors[indexPath.row].teamName
         return cell
     }
     
