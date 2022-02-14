@@ -25,18 +25,18 @@ class ViewController: UIViewController, UITabBarControllerDelegate, UITabBarDele
 // MARK: - Functions and Actions
 
     public func moveData() {
-        database.setValue(tournament.teamNames)
+        database.setValue(tournament.teamName)
     }
     
     public func getData() {
-        tournament.teamNames = []
-        tournament.colors = []
+        tournament.team = [:]
+        tournament.teamName = ""
+        tournament.color = ""
         database.observeSingleEvent(of: .value) { snapshot in
             for data in snapshot.children.allObjects as! [DataSnapshot] {
                 let color = data.value
                 let name = data.key
-                self.tournament.teamNames.append(name)
-                self.tournament.colors.append("\(String(describing: color))")
+                self.tournament.team = [name: (String(describing: color))]
                 self.competition.append(self.tournament)
             }
         }
