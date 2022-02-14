@@ -9,11 +9,9 @@ import UIKit
 
 class Doorman: UIViewController, UITableViewDelegate, UITableViewDataSource {
 // MARK: - Create any necessary variables
-    var competitors: [String] = []
     @IBOutlet weak var doorTableView: UITableView!
-    //Variables below represent the two selected teams that will compete (store competing team names here)
-    var compTeam1: String = ""
-    var compTeam2: String = ""
+    var teams : [String: String] = [:]
+    
 //MARK: - viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +21,7 @@ class Doorman: UIViewController, UITableViewDelegate, UITableViewDataSource {
 // MARK: - Write any necessary functions
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return competitors.count
+        return teams.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
