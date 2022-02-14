@@ -41,8 +41,8 @@ class Doorman: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            teamsArray.remove(at: indexPath.row)
+        if editingStyle == .insert {
+            insertRows(at: indexPath, with: UITableView.RowAnimation.none)
             getData()
         }
         doorTableView.reloadData()
