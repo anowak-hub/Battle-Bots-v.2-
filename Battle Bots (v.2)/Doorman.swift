@@ -26,9 +26,20 @@ class Doorman: UIViewController, UITableViewDelegate, UITableViewDataSource {
 // MARK: - Write any necessary functions
     
     @IBAction func doneButtonPressed(_ sender: Any) {
+        let confirmAlert = UIAlertController(title: "Confirm", message: "Would you like to confirm your selection? (Notice: Once you confirm, this page will be temporarily locked until the judge decides a winner)", preferredStyle: UIAlertController.Style.alert)
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        let confirm = UIAlertAction(title: "Confirm", style: .default) { confirm in
+            let inProgressAlert = UIAlertController(title: "In Progress", message: "Sorry, but the match is currently in progress. You'd have to wait until the judge decides a winner.", preferredStyle: UIAlertController.Style.alert)
+            self.present(inProgressAlert, animated: true, completion: nil)
+        }
+        confirmAlert.addAction(cancel)
+        confirmAlert.addAction(confirm)
+        present(confirmAlert, animated: true, completion: nil)
     }
+    
     @IBAction func resetButtonPressed(_ sender: Any) {
     }
+    
     @IBAction func helpButtonPressed(_ sender: Any) {
         let helpAlert = UIAlertController(title: "Info", message: "The Doorman plays a very special role. It's job is to select the teams and students from the presented list and decide who exactly is competing against who. After selecting the desired competitors, the Doorman will be able to confirm their selection, and the app will update accordingly.", preferredStyle: UIAlertController.Style.alert)
         let ok = UIAlertAction(title: "Ok", style: .default, handler: nil)
