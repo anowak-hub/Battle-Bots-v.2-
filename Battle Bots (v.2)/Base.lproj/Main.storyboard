@@ -190,19 +190,19 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Doorman" image="tray.2" catalog="system" id="KUg-Ns-xgS"/>
                     <toolbarItems>
-                        <barButtonItem style="done" systemItem="done" id="vUL-aY-brB">
+                        <barButtonItem title="Help" width="183" style="done" id="bhQ-yF-VHg">
                             <connections>
-                                <action selector="doneButtonPressed:" destination="y29-Wu-tw9" id="4O8-pd-wQy"/>
+                                <action selector="helpButtonPressed:" destination="y29-Wu-tw9" id="oGI-cD-vYx"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem title="Reset" style="done" id="m4e-d6-R8M">
+                        <barButtonItem title="Reset" width="498.5" style="done" id="m4e-d6-R8M">
                             <connections>
                                 <action selector="resetButtonPressed:" destination="y29-Wu-tw9" id="ueX-7J-FLL"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem title="Help" style="done" id="bhQ-yF-VHg">
+                        <barButtonItem title="Confirm" style="done" id="vUL-aY-brB">
                             <connections>
-                                <action selector="helpButtonPressed:" destination="y29-Wu-tw9" id="oGI-cD-vYx"/>
+                                <action selector="doneButtonPressed:" destination="y29-Wu-tw9" id="4O8-pd-wQy"/>
                             </connections>
                         </barButtonItem>
                     </toolbarItems>
