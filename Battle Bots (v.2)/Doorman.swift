@@ -44,7 +44,9 @@ class Doorman: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .insert {
-            insertRows(at: indexPath, with: UITableView.RowAnimation.none)
+            var comp = competitors[indexPath.row].teamName
+            let competitor = Tournament()
+            
             getData()
         }
         doorTableView.reloadData()
