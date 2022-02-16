@@ -25,6 +25,17 @@ class Doorman: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
 // MARK: - Write any necessary functions
     
+    @IBAction func doneButtonPressed(_ sender: Any) {
+    }
+    @IBAction func resetButtonPressed(_ sender: Any) {
+    }
+    @IBAction func helpButtonPressed(_ sender: Any) {
+        let helpAlert = UIAlertController(title: "Info", message: "The Doorman plays a very special role. It's job is to select the teams and students from the presented list and decide who exactly is competing against who. After selecting the desired competitors, the Doorman will be able to confirm their selection, and the app will update accordingly.", preferredStyle: UIAlertController.Style.alert)
+        let ok = UIAlertAction(title: "Ok", style: .default, handler: nil)
+        helpAlert.addAction(ok)
+        present(helpAlert, animated: true, completion: nil)
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return teamsArray.count
     }
@@ -44,7 +55,11 @@ class Doorman: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .insert {
-            insertRows(at: indexPath, with: UITableView.RowAnimation.none)
+            let comp1 = competitors[indexPath.row].teamName
+            let comp2 = competitors[indexPath.row].teamName
+            team1selected.text = comp1
+            team2selected.text = comp2
+            
             getData()
         }
         doorTableView.reloadData()
