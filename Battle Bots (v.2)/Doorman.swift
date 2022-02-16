@@ -25,6 +25,12 @@ class Doorman: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
 // MARK: - Write any necessary functions
     
+    @IBAction func doneButtonPressed(_ sender: Any) {
+    }
+    @IBAction func resetButtonPressed(_ sender: Any) {
+    }
+    @IBAction func helpButtonPressed(_ sender: Any) {
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return teamsArray.count
     }
