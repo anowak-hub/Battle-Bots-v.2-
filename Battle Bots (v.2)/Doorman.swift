@@ -16,6 +16,7 @@ class Doorman: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var doorTableView: UITableView!
     var teams : [String: String] = [:]
     var teamsArray : [NSDictionary] = []
+    var selectedTeams : [String] = []
     
 //MARK: - viewDidLoad
     override func viewDidLoad() {
@@ -28,6 +29,7 @@ class Doorman: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBAction func doneButtonPressed(_ sender: Any) {
     }
     @IBAction func resetButtonPressed(_ sender: Any) {
+        selectedTeams = []
     }
     @IBAction func helpButtonPressed(_ sender: Any) {
         let helpAlert = UIAlertController(title: "Info", message: "The Doorman plays a very special role. It's job is to select the teams and students from the presented list and decide who exactly is competing against who. After selecting the desired competitors, the Doorman will be able to confirm their selection, and the app will update accordingly.", preferredStyle: UIAlertController.Style.alert)
