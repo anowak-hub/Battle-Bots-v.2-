@@ -120,7 +120,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Axz-tN-uex">
-                                <rect key="frame" x="0.0" y="70" width="810" height="810"/>
+                                <rect key="frame" x="0.0" y="70" width="810" height="760"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="doorCell" id="gJY-YB-Gal">
@@ -134,7 +134,7 @@
                                 </prototypes>
                             </tableView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="lqc-Go-rUG">
-                                <rect key="frame" x="0.0" y="880" width="810" height="150"/>
+                                <rect key="frame" x="0.0" y="830" width="810" height="150"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="kF4-NJ-BE4">
                                         <rect key="frame" x="0.0" y="0.0" width="405" height="150"/>
@@ -189,6 +189,24 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Doorman" image="tray.2" catalog="system" id="KUg-Ns-xgS"/>
+                    <toolbarItems>
+                        <barButtonItem style="done" systemItem="done" id="vUL-aY-brB">
+                            <connections>
+                                <action selector="doneButtonPressed:" destination="y29-Wu-tw9" id="4O8-pd-wQy"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem title="Reset" style="done" id="m4e-d6-R8M">
+                            <connections>
+                                <action selector="resetButtonPressed:" destination="y29-Wu-tw9" id="ueX-7J-FLL"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem title="Help" style="done" id="bhQ-yF-VHg">
+                            <connections>
+                                <action selector="helpButtonPressed:" destination="y29-Wu-tw9" id="oGI-cD-vYx"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="doorTableView" destination="Axz-tN-uex" id="smu-Hb-nUW"/>
                         <outlet property="team1selected" destination="cYQ-h7-m34" id="7Xk-ZI-cdb"/>
