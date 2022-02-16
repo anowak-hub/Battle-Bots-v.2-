@@ -50,8 +50,10 @@ class Doorman: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .insert {
-            var comp = competitors[indexPath.row].teamName
-            let competitor = Tournament()
+            let comp1 = competitors[indexPath.row].teamName
+            let comp2 = competitors[indexPath.row].teamName
+            team1selected.text = comp1
+            team2selected.text = comp2
             
             getData()
         }
