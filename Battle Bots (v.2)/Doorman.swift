@@ -51,6 +51,8 @@ class Doorman: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     func moveTeams() {
+        teamsArray.append([teams.keys: teams.values])
+        
         let database = Database.database().reference().child("Tournament")
         database.setValue(teamsArray)
     }
