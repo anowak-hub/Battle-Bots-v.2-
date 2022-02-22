@@ -82,7 +82,11 @@ class Doorman: UIViewController, UITableViewDelegate, UITableViewDataSource {
     func getTeams() {
         database.observeSingleEvent(of: .value) { snapshot in
             for data in snapshot.children.allObjects as! [DataSnapshot] {
+                let competitor = Tournament()
+                let name = data.key
                 
+                competitor.teamName = name
+                self.competitors.append(competitor)
             }
         }
     }
