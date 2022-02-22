@@ -20,7 +20,7 @@ class ViewController: UIViewController, UITabBarControllerDelegate, UITabBarDele
     override func viewDidLoad() {
         super.viewDidLoad()
         //Add any addiotional setup
-        moveData()
+        
     }
 // MARK: - Functions and Actions
 
