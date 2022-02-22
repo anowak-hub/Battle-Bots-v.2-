@@ -13,6 +13,7 @@ class Doorman: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var team2selected: UILabel!
     // MARK: - Create any necessary variables
     var competitors: [Tournament] = []
+    var database = Database.database().reference().child("Tournament")
     @IBOutlet weak var doorTableView: UITableView!
     var teams : [String: String] = [:]
     var teamsArray : [NSDictionary] = []
@@ -73,19 +74,16 @@ class Doorman: UIViewController, UITableViewDelegate, UITableViewDataSource {
             team1selected.text = comp1
             team2selected.text = comp2
             
-            getData()
+            getTeams()
         }
         doorTableView.reloadData()
     }
     
-    func moveTeams() {
-        teamsArray.append([teams.keys: teams.values])
-        
-        let database = Database.database().reference().child("Tournament")
-        database.setValue(teamsArray)
-    }
-    
-    func getData() {
-        
+    func getTeams() {
+        database.observeSingleEvent(of: .value) { snapshot in
+            for data in snapshot.children.allObjects as! [DataSnapshot] {
+                
+            }
+        }
     }
 }
