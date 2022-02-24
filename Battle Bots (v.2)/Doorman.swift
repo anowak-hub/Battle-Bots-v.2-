@@ -3,7 +3,7 @@
 //  Battle Bots (v.2)
 //
 //  Created by Adam Cubas on 2/4/22.
-//
+// another hog rider
 
 import Firebase
 import UIKit
@@ -20,10 +20,20 @@ class Doorman: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var selectedTeams : [String] = []
     
 //MARK: - viewDidLoad
+    override func viewDidAppear(_ animated: Bool) {
+        doorTableView.reloadData()
+        
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         doorTableView.dataSource = self
         doorTableView.delegate = self
+        getTeams()
+
+       
     }
 // MARK: - Write any necessary functions
     
@@ -41,6 +51,7 @@ class Doorman: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBAction func resetButtonPressed(_ sender: Any) {
         selectedTeams = []
+        
     }
     
     @IBAction func helpButtonPressed(_ sender: Any) {
@@ -74,20 +85,25 @@ class Doorman: UIViewController, UITableViewDelegate, UITableViewDataSource {
             team1selected.text = comp1
             team2selected.text = comp2
             
-            getTeams()
         }
         doorTableView.reloadData()
     }
     
-    func getTeams() {
-        database.observeSingleEvent(of: .value) { snapshot in
+    func  getTeams() {
+        self.database.observeSingleEvent(of: .value) { snapshot in
+            
             for data in snapshot.children.allObjects as! [DataSnapshot] {
                 let competitor = Tournament()
-                let name = data.key
+                let name = data.key as! String
+                let color = data.value as! String
                 
+                competitor.color = color
                 competitor.teamName = name
                 self.competitors.append(competitor)
+                
+                
             }
         }
+     
     }
 }
