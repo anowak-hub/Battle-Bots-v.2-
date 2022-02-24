@@ -137,19 +137,19 @@
                                 <rect key="frame" x="0.0" y="830" width="810" height="150"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="lqc-Go-rUG">
-                                        <rect key="frame" x="0.0" y="0.0" width="810" height="109"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="810" height="114"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="kF4-NJ-BE4">
-                                                <rect key="frame" x="0.0" y="0.0" width="405" height="109"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="405" height="114"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team 1:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zjB-ZT-XT0">
-                                                        <rect key="frame" x="146.5" y="0.0" width="112.5" height="51"/>
+                                                        <rect key="frame" x="146.5" y="0.0" width="112.5" height="44.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cYQ-h7-m34">
-                                                        <rect key="frame" x="155.5" y="51" width="94" height="58"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cYQ-h7-m34">
+                                                        <rect key="frame" x="155.5" y="44.5" width="94" height="69.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -157,16 +157,16 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="tFz-iN-jPy">
-                                                <rect key="frame" x="405" y="0.0" width="405" height="109"/>
+                                                <rect key="frame" x="405" y="0.0" width="405" height="114"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team 2:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lFr-c1-VxZ">
-                                                        <rect key="frame" x="144.5" y="0.0" width="116.5" height="51"/>
+                                                        <rect key="frame" x="144.5" y="0.0" width="116.5" height="47"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dPi-ob-SU1">
-                                                        <rect key="frame" x="155.5" y="51" width="94" height="58"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dPi-ob-SU1">
+                                                        <rect key="frame" x="155.5" y="47" width="94" height="67"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -176,10 +176,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" spacing="250" translatesAutoresizingMaskIntoConstraints="NO" id="UDs-tB-BH1">
-                                        <rect key="frame" x="0.0" y="112" width="810" height="38"/>
+                                        <rect key="frame" x="0.0" y="117" width="810" height="33"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J4r-bH-HxY">
-                                                <rect key="frame" x="0.0" y="7" width="103.5" height="31"/>
+                                                <rect key="frame" x="0.0" y="2" width="103.5" height="31"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="tinted" title="Confirm"/>
                                                 <connections>
@@ -187,7 +187,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oie-CZ-AKZ">
-                                                <rect key="frame" x="353.5" y="7" width="103" height="31"/>
+                                                <rect key="frame" x="353.5" y="2" width="103" height="31"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="gray" title="Reset"/>
                                                 <connections>
@@ -195,7 +195,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eG9-hZ-B1l">
-                                                <rect key="frame" x="706.5" y="7" width="103.5" height="31"/>
+                                                <rect key="frame" x="706.5" y="2" width="103.5" height="31"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Help"/>
                                                 <connections>

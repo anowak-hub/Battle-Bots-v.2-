@@ -51,6 +51,8 @@ class Doorman: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBAction func resetButtonPressed(_ sender: Any) {
         selectedTeams = []
+        team1selected.text = ""
+        team2selected.text = ""
         
     }
     
@@ -71,6 +73,10 @@ class Doorman: UIViewController, UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, titleForDeleteConfirmationButtonForRowAt indexPath: IndexPath) -> String? {
+        return "Add"
+    }
+    
     func confirm() {
         let alert = UIAlertController(title: "Confirm", message: "Do You Wish to Proceed?", preferredStyle: UIAlertController.Style.alert)
         let yes = UIAlertAction(title: "Yes", style: .default, handler: nil)
@@ -79,12 +85,16 @@ class Doorman: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .insert {
+        if editingStyle == .delete {
             let comp1 = competitors[indexPath.row].teamName
-            let comp2 = competitors[indexPath.row].teamName
-            team1selected.text = comp1
-            team2selected.text = comp2
+            selectedTeams.insert(comp1, at: 0)
+            team1selected.text = selectedTeams[0]
             
+            
+        }
+        team1selected.text = selectedTeams[0]
+        if selectedTeams.count > 1 {
+            team2selected.text = selectedTeams[1]
         }
         doorTableView.reloadData()
     }
@@ -100,7 +110,7 @@ class Doorman: UIViewController, UITableViewDelegate, UITableViewDataSource {
                 competitor.color = color
                 competitor.teamName = name
                 self.competitors.append(competitor)
-                
+                print("ghohrg")
                 
             }
         }
