@@ -70,6 +70,7 @@ class Doorman: UIViewController, UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "doorCell", for: indexPath)
         cell.textLabel?.text = competitors[indexPath.row].teamName
+        
         return cell
     }
     
@@ -104,13 +105,12 @@ class Doorman: UIViewController, UITableViewDelegate, UITableViewDataSource {
             
             for data in snapshot.children.allObjects as! [DataSnapshot] {
                 let competitor = Tournament()
-                let name = data.key as! String
+                let name = data.key
                 let color = data.value as! String
                 
                 competitor.color = color
                 competitor.teamName = name
                 self.competitors.append(competitor)
-                print("ghohrg")
                 
             }
         }
