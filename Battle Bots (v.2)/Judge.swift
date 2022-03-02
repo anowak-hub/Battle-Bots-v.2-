@@ -20,4 +20,8 @@ class Judge: UIViewController {
     }
 // MARK: - Actions, Functions, etc.
 
+    @IBAction func team1ButtonPressed(_ sender: Any) {
+    }
+    @IBAction func team2ButtonPressed(_ sender: Any) {
+    }
 }
