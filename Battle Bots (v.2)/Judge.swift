@@ -25,8 +25,17 @@ class Judge: UIViewController {
 
     }
 // MARK: - Actions, Functions, etc.
+
+    @IBAction func team1ButtonPressed(_ sender: Any) {
+    }
     
-    func setCurrentTeams() {
-        self.database.setValue(currentTeams, forKey: "currentTeams")
+    @IBAction func team2ButtonPressed(_ sender: Any) {
+    }
+    
+    @IBAction func helpButtonPressed(_ sender: Any) {
+        let helpAlert = UIAlertController(title: "Info", message: "The Judge's job is to determine the victor of the match. In order to do that, the judge must press one of the buttons, which represents the teams, under 'Select a Winner.' After selecting a team, you will be asked to confirm your decision. Once the confirmation is complete, you have successfully chosen a winner.", preferredStyle: UIAlertController.Style.alert)
+        let ok = UIAlertAction(title: "Ok", style: .default, handler: nil)
+        helpAlert.addAction(ok)
+        present(helpAlert, animated: true, completion: nil)
     }
 }
