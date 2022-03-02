@@ -10,7 +10,9 @@ import UIKit
 
 class Judge: UIViewController {
 // MARK: - Outlets, Constants, and Variables
-    
+    let database = Database.database().reference().child("currentTeams")
+    var currentTeams: [String] = [""]
+    database.setValue(currentTeams)
     
 // MARK: - viewDidLoad
     override func viewDidLoad() {
