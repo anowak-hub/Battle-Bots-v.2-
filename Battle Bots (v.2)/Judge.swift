@@ -5,6 +5,7 @@
 //  Created by Adam Cubas on 2/4/22.
 //
 
+import Firebase
 import UIKit
 
 class Judge: UIViewController {
@@ -17,5 +18,6 @@ class Judge: UIViewController {
         super.viewDidLoad()
 
     }
+// MARK: - Actions, Functions, etc.
 
 }
