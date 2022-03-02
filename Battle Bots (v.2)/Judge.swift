@@ -16,7 +16,7 @@ class Judge: UIViewController {
     @IBOutlet weak var team2Button: UIButton!
 // MARK: - Outlets, Constants, and Variables
     
-    let database = Database.database().reference().child("CurrentTeams")
+    let databaseCurrentTeams = Database.database().reference().child("CurrentTeams")
     var currentTeams: [String] = [""]
     
 // MARK: - viewDidLoad
@@ -40,7 +40,7 @@ class Judge: UIViewController {
     }
     
     func setCurrentTeams() {
-        self.database.setValue(currentTeams)
+        self.databaseCurrentTeams.setValue(currentTeams)
     }
     
 }
