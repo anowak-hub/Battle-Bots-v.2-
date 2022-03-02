@@ -22,6 +22,12 @@ class Judge: UIViewController {
 
     @IBAction func team1ButtonPressed(_ sender: Any) {
     }
+    
     @IBAction func team2ButtonPressed(_ sender: Any) {
     }
+    
+    @IBAction func helpButtonPressed(_ sender: Any) {
+    
+    }
+    
 }
