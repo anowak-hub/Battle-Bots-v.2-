@@ -38,4 +38,9 @@ class Judge: UIViewController {
         helpAlert.addAction(ok)
         present(helpAlert, animated: true, completion: nil)
     }
+    
+    func setCurrentTeams() {
+        self.database.setValue(currentTeams)
+    }
+    
 }
