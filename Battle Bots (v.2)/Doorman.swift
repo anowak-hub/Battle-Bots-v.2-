@@ -14,6 +14,7 @@ class Doorman: UIViewController, UITableViewDelegate, UITableViewDataSource {
     // MARK: - Create any necessary variables
     var competitors: [Tournament] = []
     let database = Database.database().reference().child("Tournament")
+    let winnerDatabase = Database.database().reference().child("Winners")
     @IBOutlet weak var doorTableView: UITableView!
     var teams : [String: String] = [:]
     var teamsArray : [NSDictionary] = []
@@ -100,7 +101,7 @@ class Doorman: UIViewController, UITableViewDelegate, UITableViewDataSource {
         doorTableView.reloadData()
     }
     
-    func  getTeams() {
+    func getTeams() {
         self.database.observeSingleEvent(of: .value) { snapshot in
             
             for data in snapshot.children.allObjects as! [DataSnapshot] {
