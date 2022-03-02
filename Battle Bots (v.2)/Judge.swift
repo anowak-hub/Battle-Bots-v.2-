@@ -16,7 +16,7 @@ class Judge: UIViewController {
     @IBOutlet weak var team2Button: UIButton!
 // MARK: - Outlets, Constants, and Variables
     
-    let database = Database.database().reference().child("currentTeams")
+    let database = Database.database().reference().child("CurrentTeams")
     var currentTeams: [String] = [""]
     
 // MARK: - viewDidLoad
