@@ -80,4 +80,3 @@ class Judge: UIViewController {
         team1Label.text = currentTeams[1]
         team2Label.text = currentTeams[2]
 }
-  
