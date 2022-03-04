@@ -73,10 +73,9 @@ class Judge: UIViewController {
             for data in snapshot.children.allObjects as! [DataSnapshot] {
                 if let value = data.value {
                     self.currentTeams.append(String(describing: value))
-                print(self.currentTeams)
+                    print(self.currentTeams)
+                }
             }
         }
     }
-    
 }
-  
