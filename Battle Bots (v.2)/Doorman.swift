@@ -14,6 +14,7 @@ class Doorman: UIViewController, UITableViewDelegate, UITableViewDataSource {
     // MARK: - Create any necessary variables
     var competitors: [Tournament] = []
     let database = Database.database().reference().child("Tournament")
+    let databaseCurrentTeams = Database.database().reference().child("CurrentTeams")
     let winnerDatabase = Database.database().reference().child("Winners")
     @IBOutlet weak var doorTableView: UITableView!
     var teams : [String: String] = [:]
@@ -44,6 +45,8 @@ class Doorman: UIViewController, UITableViewDelegate, UITableViewDataSource {
         let confirm = UIAlertAction(title: "Confirm", style: .default) { confirm in
             let inProgressAlert = UIAlertController(title: "In Progress", message: "Sorry, but the match is currently in progress. You'd have to wait until the judge decides a winner.", preferredStyle: UIAlertController.Style.alert)
             self.present(inProgressAlert, animated: true, completion: nil)
+            self.databaseCurrentTeams.setValue("")
+            self.databaseCurrentTeams.setValue(self.selectedTeams)
         }
         confirmAlert.addAction(cancel)
         confirmAlert.addAction(confirm)
