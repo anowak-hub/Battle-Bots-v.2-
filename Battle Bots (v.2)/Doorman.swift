@@ -8,6 +8,7 @@
 import Firebase
 import UIKit
 
+
 class Doorman: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var team1selected: UILabel!
     @IBOutlet weak var team2selected: UILabel!
@@ -75,14 +76,15 @@ class Doorman: UIViewController, UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "doorCell", for: indexPath)
         cell.textLabel?.text = competitors[indexPath.row].teamName
        
-        var c = 0x(competitors[indexPath.row].color)
-       
-        var R = Int(c.prefix(3))!
-        var G = Int(c[c.index(c.startIndex, offsetBy: 3)..<c.index(c.endIndex, offsetBy: -3)])!
-        var B = Int(c.suffix(3))!
+        var c = competitors[indexPath.row].color
+        var color = UIColor(0xc)
+        
+//        var R = Int(c.prefix(3))!
+//        var G = Int(c[c.index(c.startIndex, offsetBy: 3)..<c.index(c.endIndex, offsetBy: -3)])!
+//        var B = Int(c.suffix(3))!
         
         
-        cell.backgroundColor? = UIColor(rgb: c)
+        cell.contentView.backgroundColor? = color
         return cell
     }
     
@@ -128,4 +130,14 @@ class Doorman: UIViewController, UITableViewDelegate, UITableViewDataSource {
         }
      
     }
+    
+    
+}
+extension UIColor {
+     public convenience init(_ value: Int) {
+         let red = CGFloat(value >> 16 & 0xFF) / 255.0
+         let green = CGFloat(value >> 8 & 0xFF) / 255.0
+         let blue = CGFloat(value & 0xFF) / 255.0
+         self.init(red: red, green: green, blue: blue, alpha: 1.0)
+     }
 }
