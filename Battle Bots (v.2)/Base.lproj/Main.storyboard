@@ -19,7 +19,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="cQB-DX-g6c">
                                 <rect key="frame" x="0.0" y="70" width="810" height="1010"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="battlebots" translatesAutoresizingMaskIntoConstraints="NO" id="sc9-YJ-1pD">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="Robot Rumble" translatesAutoresizingMaskIntoConstraints="NO" id="sc9-YJ-1pD">
                                         <rect key="frame" x="0.0" y="0.0" width="810" height="290"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="credits2" translatesAutoresizingMaskIntoConstraints="NO" id="3Xd-gd-mk0">
@@ -389,7 +389,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="battlebots" width="960" height="720"/>
+        <image name="Robot Rumble" width="960" height="720"/>
         <image name="book.closed.fill" catalog="system" width="115" height="128"/>
         <image name="credits2" width="960" height="720"/>
         <image name="eyeglasses" catalog="system" width="128" height="54"/>
