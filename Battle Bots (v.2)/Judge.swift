@@ -34,6 +34,9 @@ class Judge: UIViewController {
         let confirm = UIAlertAction(title: "Confirm", style: .default) { confirm in
             self.winnersArray.append(self.team1Label.text!)
             self.databaseWinners.setValue(self.winnersArray)
+            
+            self.team1Button.alpha = 0
+            self.team2Button.alpha = 0
         }
         
         confirmAlert.addAction(cancel)
@@ -47,7 +50,9 @@ class Judge: UIViewController {
         let confirm = UIAlertAction(title: "Confirm", style: .default) { confirm in
             self.winnersArray.append(self.team2Label.text!)
             self.databaseWinners.setValue(self.winnersArray)
-
+            
+            self.team1Button.alpha = 0
+            self.team2Button.alpha = 0
         }
         
         confirmAlert.addAction(cancel)
@@ -69,8 +74,6 @@ class Judge: UIViewController {
                 if let value = data.value {
                     self.currentTeams.append(String(describing: value))
                 print(self.currentTeams)
-        
-                }
             }
         }
     }
