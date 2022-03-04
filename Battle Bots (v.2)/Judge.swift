@@ -75,8 +75,9 @@ class Judge: UIViewController {
                     self.currentTeams.append(String(describing: value))
                 print(self.currentTeams)
             }
+            }
         }
-    }
         team1Label.text = currentTeams[1]
         team2Label.text = currentTeams[2]
+    }
 }
