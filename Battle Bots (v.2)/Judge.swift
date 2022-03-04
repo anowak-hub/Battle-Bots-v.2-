@@ -40,7 +40,13 @@ class Judge: UIViewController {
     }
     
     func setCurrentTeams() {
-        self.databaseCurrentTeams.setValue(currentTeams)
+        databaseCurrentTeams.observeSingleEvent(of: .value) {snapshot in
+            
+            for data in snapshot.children.allObjects as! [DataSnapshot] {
+                self.currentTeams.append("\(data)")
+                print(self.currentTeams)
+            }
+        }
     }
     
 }
