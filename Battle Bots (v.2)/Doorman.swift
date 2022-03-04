@@ -45,7 +45,7 @@ class Doorman: UIViewController, UITableViewDelegate, UITableViewDataSource {
         let confirm = UIAlertAction(title: "Confirm", style: .default) { confirm in
             let inProgressAlert = UIAlertController(title: "In Progress", message: "Sorry, but the match is currently in progress. You'd have to wait until the judge decides a winner.", preferredStyle: UIAlertController.Style.alert)
             self.present(inProgressAlert, animated: true, completion: nil)
-            self.databaseCurrentTeams.setValue("")
+            self.databaseCurrentTeams.setValue([])
             self.databaseCurrentTeams.setValue(self.selectedTeams)
         }
         confirmAlert.addAction(cancel)
@@ -75,14 +75,14 @@ class Doorman: UIViewController, UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "doorCell", for: indexPath)
         cell.textLabel?.text = competitors[indexPath.row].teamName
        
-        var c = competitors[indexPath.row].color
-       
-        var R = Int(c.prefix(3))!
-        var G = Int(c[c.index(c.startIndex, offsetBy: 3)..<c.index(c.endIndex, offsetBy: -3)])!
-        var B = Int(c.suffix(3))!
-        
-        
-        cell.backgroundColor? = .init(red: CGFloat(R), green: CGFloat(G), blue: CGFloat(B), alpha: CGFloat(1))
+//        var c = competitors[indexPath.row].color
+//
+//        var R = Int(c.prefix(3))!
+//        var G = Int(c[c.index(c.startIndex, offsetBy: 3)..<c.index(c.endIndex, offsetBy: -3)])!
+//        var B = Int(c.suffix(3))!
+//
+//
+//        cell.backgroundColor? = .init(red: CGFloat(R), green: CGFloat(G), blue: CGFloat(B), alpha: CGFloat(1))
         return cell
     }
     

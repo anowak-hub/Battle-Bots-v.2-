@@ -43,8 +43,11 @@ class Judge: UIViewController {
         databaseCurrentTeams.observeSingleEvent(of: .value) {snapshot in
             
             for data in snapshot.children.allObjects as! [DataSnapshot] {
-                self.currentTeams.append("\(data)")
+                if let value = data.value {
+                    self.currentTeams.append(String(describing: value))
                 print(self.currentTeams)
+        
+                }
             }
         }
     }
