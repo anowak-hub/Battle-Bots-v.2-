@@ -10,26 +10,54 @@ import UIKit
 
 class Judge: UIViewController {
 
-    @IBOutlet weak var team1Label: UIStackView!
-    @IBOutlet weak var team2Label: UIStackView!
+    // MARK: - Outlets, Constants, and Variables
+    @IBOutlet weak var team1Label: UILabel!
+    @IBOutlet weak var team2Label: UILabel!
     @IBOutlet weak var team1Button: UIButton!
     @IBOutlet weak var team2Button: UIButton!
-// MARK: - Outlets, Constants, and Variables
     
     let databaseCurrentTeams = Database.database().reference().child("CurrentTeams")
+    let databaseWinners = Database.database().reference().child("Winners")
     var currentTeams: [String] = [""]
+    var winnersArray: [String] = [""]
     
 // MARK: - viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setCurrentTeams()
     }
 // MARK: - Actions, Functions, etc.
 
     @IBAction func team1ButtonPressed(_ sender: Any) {
+        let confirmAlert = UIAlertController(title: "Confirm", message: "Notice: Once you press 'Confirm' you will have successfully selected the winner. You cannot go back on this decision.", preferredStyle: UIAlertController.Style.alert)
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        let confirm = UIAlertAction(title: "Confirm", style: .default) { confirm in
+            self.winnersArray.append(self.team1Label.text!)
+            self.databaseWinners.setValue(self.winnersArray)
+            
+            self.team1Button.alpha = 0
+            self.team2Button.alpha = 0
+        }
+        
+        confirmAlert.addAction(cancel)
+        confirmAlert.addAction(confirm)
+        present(confirmAlert, animated: true, completion: nil)
     }
     
     @IBAction func team2ButtonPressed(_ sender: Any) {
+        let confirmAlert = UIAlertController(title: "Confirm", message: "Notice: Once you press 'Confirm' you will have successfully selected the winner. You cannot go back on this decision.", preferredStyle: UIAlertController.Style.alert)
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        let confirm = UIAlertAction(title: "Confirm", style: .default) { confirm in
+            self.winnersArray.append(self.team2Label.text!)
+            self.databaseWinners.setValue(self.winnersArray)
+            
+            self.team1Button.alpha = 0
+            self.team2Button.alpha = 0
+        }
+        
+        confirmAlert.addAction(cancel)
+        confirmAlert.addAction(confirm)
+        present(confirmAlert, animated: true, completion: nil)
     }
     
     @IBAction func helpButtonPressed(_ sender: Any) {
@@ -40,8 +68,18 @@ class Judge: UIViewController {
     }
     
     func setCurrentTeams() {
-        self.databaseCurrentTeams.setValue(currentTeams)
+        databaseCurrentTeams.observeSingleEvent(of: .value) {snapshot in
+            
+            for data in snapshot.children.allObjects as! [DataSnapshot] {
+                if let value = data.value {
+                    self.currentTeams.append(String(describing: value))
+                print(self.currentTeams)
+            }
+            }
+            let lastIndex = self.currentTeams.count-1
+            print(lastIndex)
+            self.team1Label.text = self.currentTeams[lastIndex-1]
+            self.team2Label.text = self.currentTeams[lastIndex]
+        }
     }
-    
 }
-  

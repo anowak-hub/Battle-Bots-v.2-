@@ -19,10 +19,10 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="cQB-DX-g6c">
                                 <rect key="frame" x="0.0" y="70" width="810" height="1010"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="Robot Rumble" translatesAutoresizingMaskIntoConstraints="NO" id="sc9-YJ-1pD">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="Robot Rumble" translatesAutoresizingMaskIntoConstraints="NO" id="sc9-YJ-1pD">
                                         <rect key="frame" x="0.0" y="0.0" width="810" height="290"/>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="credits2" translatesAutoresizingMaskIntoConstraints="NO" id="3Xd-gd-mk0">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="credits2" translatesAutoresizingMaskIntoConstraints="NO" id="3Xd-gd-mk0">
                                         <rect key="frame" x="0.0" y="290" width="810" height="720"/>
                                     </imageView>
                                 </subviews>
@@ -338,9 +338,9 @@
                     <tabBarItem key="tabBarItem" title="Judge" image="hammer.fill" catalog="system" id="1zn-4v-OfL"/>
                     <connections>
                         <outlet property="team1Button" destination="xOZ-8C-GzK" id="W81-My-tfw"/>
-                        <outlet property="team1Label" destination="0RZ-3D-CAB" id="piY-Ao-xL1"/>
+                        <outlet property="team1Label" destination="tTE-dJ-NXx" id="U6n-QS-dgU"/>
                         <outlet property="team2Button" destination="LAP-fF-r7l" id="dRK-Gd-AoH"/>
-                        <outlet property="team2Label" destination="0RZ-3D-CAB" id="3dV-0T-RLc"/>
+                        <outlet property="team2Label" destination="uQv-bz-Fkd" id="3oV-6C-28g"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pqz-fZ-6Mo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

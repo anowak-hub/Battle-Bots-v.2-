@@ -16,12 +16,12 @@ class Doorman: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var competitors: [Tournament] = []
     let database = Database.database().reference().child("Tournament")
     let databaseCurrentTeams = Database.database().reference().child("CurrentTeams")
-    let winnerDatabase = Database.database().reference().child("Winners")
+    let databaseWinners = Database.database().reference().child("Winners")
     @IBOutlet weak var doorTableView: UITableView!
     var teams : [String: String] = [:]
     var teamsArray : [NSDictionary] = []
     var selectedTeams : [String] = []
-    
+    var ifWinnerSelected: Bool = Bool()
 //MARK: - viewDidLoad
     override func viewDidAppear(_ animated: Bool) {
         doorTableView.reloadData()
@@ -46,8 +46,20 @@ class Doorman: UIViewController, UITableViewDelegate, UITableViewDataSource {
         let confirm = UIAlertAction(title: "Confirm", style: .default) { confirm in
             let inProgressAlert = UIAlertController(title: "In Progress", message: "Sorry, but the match is currently in progress. You'd have to wait until the judge decides a winner.", preferredStyle: UIAlertController.Style.alert)
             self.present(inProgressAlert, animated: true, completion: nil)
-            self.databaseCurrentTeams.setValue("")
+            
+            self.databaseCurrentTeams.setValue([])
             self.databaseCurrentTeams.setValue(self.selectedTeams)
+            
+            self.databaseWinners.observeSingleEvent(of: .value) { snapshot in
+                for data in snapshot.children.allObjects as! [DataSnapshot] {
+                    if data.value != nil {
+                        inProgressAlert.dismiss(animated: true, completion: nil)
+                    }
+                }
+                
+            }
+                
+            
         }
         confirmAlert.addAction(cancel)
         confirmAlert.addAction(confirm)
