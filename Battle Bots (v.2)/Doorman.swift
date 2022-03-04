@@ -82,7 +82,7 @@ class Doorman: UIViewController, UITableViewDelegate, UITableViewDataSource {
         var B = Int(c.suffix(3))!
         
         
-        cell.backgroundColor! = .init(red: CGFloat(R), green: CGFloat(G), blue: CGFloat(B), alpha: CGFloat(1))
+        cell.backgroundColor? = .init(red: CGFloat(R), green: CGFloat(G), blue: CGFloat(B), alpha: CGFloat(1))
         return cell
     }
     

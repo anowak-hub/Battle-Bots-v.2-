@@ -22,7 +22,7 @@ class Judge: UIViewController {
 // MARK: - viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setCurrentTeams()
     }
 // MARK: - Actions, Functions, etc.
 
