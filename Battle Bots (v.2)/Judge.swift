@@ -26,6 +26,10 @@ class Judge: UIViewController {
         super.viewDidLoad()
         setCurrentTeams()
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        setCurrentTeams()
+    }
 // MARK: - Actions, Functions, etc.
 
     @IBAction func team1ButtonPressed(_ sender: Any) {
