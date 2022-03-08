@@ -52,7 +52,7 @@ class Doorman: UIViewController, UITableViewDelegate, UITableViewDataSource {
             
             self.databaseWinners.observeSingleEvent(of: .value) { snapshot in
                 for data in snapshot.children.allObjects as! [DataSnapshot] {
-                    if data.accessibilityRespondsToUserInteraction {
+                    if data.accessibilityRespondsToUserInteraction == true {
                         inProgressAlert.dismiss(animated: true, completion: nil)
                     }
                 }
