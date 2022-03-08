@@ -88,15 +88,18 @@ class Doorman: UIViewController, UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "doorCell", for: indexPath)
         cell.textLabel?.text = competitors[indexPath.row].teamName
        
-        var c = competitors[indexPath.row].color
-        var color = UIColor(0xc)
+        let c = competitors[indexPath.row].color
+//        var color = UIColor(0xc)
+//        cell.backgroundColor? = color
         
-//        var R = Int(c.prefix(3))!
-//        var G = Int(c[c.index(c.startIndex, offsetBy: 3)..<c.index(c.endIndex, offsetBy: -3)])!
-//        var B = Int(c.suffix(3))!
-        
-        
-        cell.contentView.backgroundColor? = color
+        let R = CGFloat(Int(c.prefix(3))!)
+        let G = CGFloat(Int(c[c.index(c.startIndex, offsetBy: 3)..<c.index(c.endIndex, offsetBy: -3)])!)
+        let B = CGFloat(Int(c.suffix(3))!)
+        print(R)
+        print(G)
+        print(B)
+    
+        cell.backgroundColor? = UIColor(red: R, green: G, blue: B, alpha: 0.5)
         return cell
     }
     
