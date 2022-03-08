@@ -98,8 +98,8 @@ class Doorman: UIViewController, UITableViewDelegate, UITableViewDataSource {
         print(R)
         print(G)
         print(B)
+        cell.backgroundConfiguration?.backgroundColor = .init(red: R/255, green: G/255, blue: B/255, alpha: 1.0)
     
-        cell.backgroundColor? = UIColor(red: R, green: G, blue: B, alpha: 0.5)
         return cell
     }
     
