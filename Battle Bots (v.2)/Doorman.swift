@@ -95,9 +95,7 @@ class Doorman: UIViewController, UITableViewDelegate, UITableViewDataSource {
         let R = CGFloat(Int(c.prefix(3))!)
         let G = CGFloat(Int(c[c.index(c.startIndex, offsetBy: 3)..<c.index(c.endIndex, offsetBy: -3)])!)
         let B = CGFloat(Int(c.suffix(3))!)
-        print(R)
-        print(G)
-        print(B)
+        
         cell.backgroundConfiguration?.backgroundColor = .init(red: R/255, green: G/255, blue: B/255, alpha: 1.0)
     
         return cell
