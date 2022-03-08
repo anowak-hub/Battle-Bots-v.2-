@@ -89,9 +89,7 @@ class Doorman: UIViewController, UITableViewDelegate, UITableViewDataSource {
         cell.textLabel?.text = competitors[indexPath.row].teamName
        
         let c = competitors[indexPath.row].color
-//        var color = UIColor(0xc)
-//        cell.backgroundColor? = color
-        
+
         let R = CGFloat(Int(c.prefix(3))!)
         let G = CGFloat(Int(c[c.index(c.startIndex, offsetBy: 3)..<c.index(c.endIndex, offsetBy: -3)])!)
         let B = CGFloat(Int(c.suffix(3))!)
