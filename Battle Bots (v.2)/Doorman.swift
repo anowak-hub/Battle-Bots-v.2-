@@ -13,13 +13,11 @@ class Doorman: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var team1selected: UILabel!
     @IBOutlet weak var team2selected: UILabel!
     // MARK: - Create any necessary variables
-    var competitors: [Tournament] = []
+    var teamsArray: [Tournament] = []
     let database = Database.database().reference().child("Tournament")
     let databaseCurrentTeams = Database.database().reference().child("CurrentTeams")
     let databaseWinners = Database.database().reference().child("Winners")
     @IBOutlet weak var doorTableView: UITableView!
-    var teams : [String: String] = [:]
-    var teamsArray : [NSDictionary] = []
     var selectedTeams : [String] = []
     var ifWinnerSelected: Bool = Bool()
 //MARK: - viewDidLoad
