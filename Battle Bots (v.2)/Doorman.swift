@@ -79,14 +79,14 @@ class Doorman: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return competitors.count
+        return teamsArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "doorCell", for: indexPath)
-        cell.textLabel?.text = competitors[indexPath.row].teamName
+        cell.textLabel?.text = teamsArray[indexPath.row].robotName
        
-        let c = competitors[indexPath.row].color
+        let c = teamsArray[indexPath.row].color
 
         let R = CGFloat(Int(c.prefix(3))!)
         let G = CGFloat(Int(c[c.index(c.startIndex, offsetBy: 3)..<c.index(c.endIndex, offsetBy: -3)])!)
@@ -110,8 +110,8 @@ class Doorman: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            let comp1 = competitors[indexPath.row].teamName
-            selectedTeams.insert(comp1, at: 0)
+            let comp1 = teamsArray[indexPath.row].team.keys
+            selectedTeams.insert(contentsOf: comp1, at: 0)
             team1selected.text = selectedTeams[0]
             
             
@@ -127,14 +127,11 @@ class Doorman: UIViewController, UITableViewDelegate, UITableViewDataSource {
         self.database.observeSingleEvent(of: .value) { snapshot in
             
             for data in snapshot.children.allObjects as! [DataSnapshot] {
-                let competitor = Tournament()
+                let robotTeam = Tournament()
                 let name = data.key
-                let color = data.value as! String
                 
-                competitor.color = color
-                competitor.teamName = name
-                self.competitors.append(competitor)
-                
+                robotTeam.robotName = name
+                self.teamsArray.append(robotTeam)
             }
         }
      
