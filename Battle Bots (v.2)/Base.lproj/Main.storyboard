@@ -91,6 +91,15 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I26-X9-Hxj">
+                                <rect key="frame" x="379" y="938" width="54" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Help"/>
+                                <connections>
+                                    <action selector="mediaHelpButtonPressed:" destination="Rjd-2Y-vjm" eventType="touchUpInside" id="2qg-Pf-Lh9"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="TzH-Im-Is8"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
