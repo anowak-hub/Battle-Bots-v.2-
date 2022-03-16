@@ -21,7 +21,10 @@ class Media: UIViewController {
     }
 // MARK: - Functions and Actions
     @IBAction func mediaHelpButtonPressed(_ sender: Any) {
-    
+        let helpAlert = UIAlertController(title: "Info", message: "The Media role is very simple. All the role does is allow the user to see who is currently competing and who wins the matches. They cannot affect the course of the game.", preferredStyle: UIAlertController.Style.alert)
+        let ok = UIAlertAction(title: "Ok", style: .default, handler: nil)
+        helpAlert.addAction(ok)
+        present(helpAlert, animated: true, completion: nil)
     }
     
     
