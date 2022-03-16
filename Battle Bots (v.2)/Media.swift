@@ -20,5 +20,8 @@ class Media: UIViewController {
 
     }
 // MARK: - Functions and Actions
+    @IBAction func mediaHelpButton(_ sender: UIButton) {
+    
+    }
     
 }
