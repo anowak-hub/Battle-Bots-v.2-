@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class Media: UIViewController {
 // MARK: - Outlets, Variables, and Constants
@@ -15,6 +16,11 @@ class Media: UIViewController {
     @IBOutlet weak var winnerLabelTwo: UILabel!
     @IBOutlet weak var competitorLabelOne: UILabel!
     @IBOutlet weak var competitorLabelTwo: UILabel!
+    
+    let databaseWinners = Database.database().reference().child("Winners")
+    let databaseTournament = Database.database().reference().child("Tournament")
+    let databaseCurrent = Database.database().reference().child("Current")
+    
     // MARK: - viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
