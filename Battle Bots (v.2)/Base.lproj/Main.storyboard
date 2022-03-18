@@ -129,14 +129,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Axz-tN-uex">
-                                <rect key="frame" x="0.0" y="70" width="810" height="660"/>
+                                <rect key="frame" x="0.0" y="70" width="405" height="660"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="405" id="gwB-ZY-XZe"/>
+                                </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="doorCell" id="gJY-YB-Gal">
-                                        <rect key="frame" x="0.0" y="44.5" width="810" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="44.5" width="405" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gJY-YB-Gal" id="oHs-eL-KHc">
-                                            <rect key="frame" x="0.0" y="0.0" width="810" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="405" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -218,18 +221,38 @@
                                     <constraint firstAttribute="height" constant="150" id="0yo-ML-inY"/>
                                 </constraints>
                             </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="aiU-VJ-DTA">
+                                <rect key="frame" x="405" y="70" width="405" height="660"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="405" id="2V7-nH-LOL"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="doorCell" id="qgl-6V-EF1">
+                                        <rect key="frame" x="0.0" y="44.5" width="405" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qgl-6V-EF1" id="2AG-cK-7gD">
+                                            <rect key="frame" x="0.0" y="0.0" width="405" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="GRR-NZ-7lC"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="2ZU-Ti-VIn" firstAttribute="leading" secondItem="GRR-NZ-7lC" secondAttribute="leading" id="3dI-td-9KO"/>
                             <constraint firstItem="2ZU-Ti-VIn" firstAttribute="top" secondItem="Axz-tN-uex" secondAttribute="bottom" constant="100" id="4lh-Bs-x8w"/>
+                            <constraint firstItem="Axz-tN-uex" firstAttribute="leading" secondItem="GRR-NZ-7lC" secondAttribute="leading" id="8p7-pR-jAp"/>
                             <constraint firstItem="2ZU-Ti-VIn" firstAttribute="bottom" secondItem="GRR-NZ-7lC" secondAttribute="bottom" id="CT3-PR-cEd"/>
+                            <constraint firstItem="2ZU-Ti-VIn" firstAttribute="top" secondItem="aiU-VJ-DTA" secondAttribute="bottom" constant="150" id="Fh0-cG-Zdz"/>
+                            <constraint firstItem="GRR-NZ-7lC" firstAttribute="trailing" secondItem="aiU-VJ-DTA" secondAttribute="trailing" id="HDn-Gh-dPn"/>
+                            <constraint firstItem="aiU-VJ-DTA" firstAttribute="top" secondItem="GRR-NZ-7lC" secondAttribute="top" id="J9N-DT-krF"/>
                             <constraint firstItem="GRR-NZ-7lC" firstAttribute="trailing" secondItem="2ZU-Ti-VIn" secondAttribute="trailing" id="OCY-zG-WUR"/>
                             <constraint firstItem="2ZU-Ti-VIn" firstAttribute="bottom" secondItem="GRR-NZ-7lC" secondAttribute="bottom" id="Po0-hM-1Xi"/>
-                            <constraint firstItem="Axz-tN-uex" firstAttribute="top" secondItem="GRR-NZ-7lC" secondAttribute="top" id="Yxe-Bn-oMm"/>
-                            <constraint firstItem="Axz-tN-uex" firstAttribute="trailing" secondItem="GRR-NZ-7lC" secondAttribute="trailing" id="gO2-KD-PVn"/>
-                            <constraint firstItem="Axz-tN-uex" firstAttribute="leading" secondItem="GRR-NZ-7lC" secondAttribute="leading" id="gxe-kh-Maq"/>
+                            <constraint firstItem="2ZU-Ti-VIn" firstAttribute="top" secondItem="Axz-tN-uex" secondAttribute="bottom" constant="100" id="aFK-s8-lDe"/>
+                            <constraint firstItem="Axz-tN-uex" firstAttribute="top" secondItem="GRR-NZ-7lC" secondAttribute="top" id="eTF-TN-le5"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Doorman" image="tray.2" catalog="system" id="KUg-Ns-xgS"/>
@@ -237,6 +260,7 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="doorTableView" destination="Axz-tN-uex" id="smu-Hb-nUW"/>
+                        <outlet property="tableView" destination="aiU-VJ-DTA" id="V74-Hl-5zb"/>
                         <outlet property="team1selected" destination="cYQ-h7-m34" id="7Xk-ZI-cdb"/>
                         <outlet property="team2selected" destination="dPi-ob-SU1" id="fKJ-XE-xOd"/>
                     </connections>

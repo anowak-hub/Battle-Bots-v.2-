@@ -10,6 +10,7 @@ import UIKit
 
 
 class Doorman: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
     @IBOutlet weak var team1selected: UILabel!
     @IBOutlet weak var team2selected: UILabel!
     // MARK: - Create any necessary variables
@@ -18,12 +19,13 @@ class Doorman: UIViewController, UITableViewDelegate, UITableViewDataSource {
     let databaseCurrentTeams = Database.database().reference().child("CurrentTeams")
     let databaseWinners = Database.database().reference().child("Winners")
     @IBOutlet weak var doorTableView: UITableView!
+    @IBOutlet weak var tableView: UITableView!
     var selectedTeams : [String] = []
     var ifWinnerSelected: Bool = Bool()
 //MARK: - viewDidLoad
     override func viewDidAppear(_ animated: Bool) {
         doorTableView.reloadData()
-        
+        tableView.reloadData()
         
     }
     
@@ -32,6 +34,8 @@ class Doorman: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         doorTableView.dataSource = self
         doorTableView.delegate = self
+        tableView.dataSource = self
+        tableView.delegate = self
         getTeams()
 
        
