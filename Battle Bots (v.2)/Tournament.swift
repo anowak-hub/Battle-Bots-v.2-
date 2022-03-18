@@ -15,7 +15,7 @@ class Tournament {
     var robotName: String = ""
     var studentMembers: [String] = [""]
     var color: String = ""
-    var team: [String : String] = ["": ""]
+    var school: [String : String] = ["": ""]
     
     init()  {
         
@@ -26,7 +26,7 @@ class Tournament {
         self.robotName = robotName
         self.studentMembers = studentMembers
         self.color = color
-        self.team = [robotName: color]
+        self.school = [schoolName: color]
     }
     
 }

@@ -16,7 +16,7 @@ class Doorman: UIViewController, UITableViewDelegate, UITableViewDataSource {
     // MARK: - Create any necessary variables
     var teamsArray: [Tournament] = []
     let database = Database.database().reference().child("Tournament")
-    let databaseCurrentTeams = Database.database().reference().child("CurrentTeams")
+    let databaseCurrentTeams = Database.database().reference().child("Current")
     let databaseWinners = Database.database().reference().child("Winners")
     @IBOutlet weak var doorTableView: UITableView!
     @IBOutlet weak var tableView: UITableView!
@@ -90,7 +90,7 @@ class Doorman: UIViewController, UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "doorCell", for: indexPath)
         cell.textLabel?.text = teamsArray[indexPath.row].robotName
        
-        let c = teamsArray[indexPath.row].color
+        let c = teamsArray[indexPath.row].school.values
 
         let R = CGFloat(Int(c.prefix(3))!)
         let G = CGFloat(Int(c[c.index(c.startIndex, offsetBy: 3)..<c.index(c.endIndex, offsetBy: -3)])!)
@@ -114,8 +114,8 @@ class Doorman: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            let comp1 = teamsArray[indexPath.row].team.keys
-            selectedTeams.insert(contentsOf: comp1, at: 0)
+            let comp1 = teamsArray[indexPath.row].robotName
+            selectedTeams.insert(comp1, at: 0)
             team1selected.text = selectedTeams[0]
             
             
