@@ -16,7 +16,7 @@ class Judge: UIViewController {
     @IBOutlet weak var team1Button: UIButton!
     @IBOutlet weak var team2Button: UIButton!
     
-    let databaseCurrentTeams = Database.database().reference().child("CurrentTeams")
+    let databaseCurrentTeams = Database.database().reference().child("Current")
     let databaseWinners = Database.database().reference().child("Winners")
     var currentTeams: [String] = [""]
     var winnersArray: [String] = [""]
