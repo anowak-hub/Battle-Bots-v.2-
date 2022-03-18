@@ -59,14 +59,20 @@
                                         <rect key="frame" x="0.0" y="0.0" width="295" height="760"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MG4-fz-Wh0">
-                                                <rect key="frame" x="73.5" y="0.0" width="148" height="356.5"/>
+                                                <rect key="frame" x="73.5" y="0.0" width="148" height="240"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k68-t1-xNs">
-                                                <rect key="frame" x="100.5" y="376.5" width="94" height="383.5"/>
+                                                <rect key="frame" x="100.5" y="260" width="94" height="192"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Winner" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u8e-if-3y7">
+                                                <rect key="frame" x="94" y="472" width="107.5" height="288"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -76,14 +82,20 @@
                                         <rect key="frame" x="315" y="0.0" width="295" height="760"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PUj-Zn-XBb">
-                                                <rect key="frame" x="70.5" y="0.0" width="154" height="356.5"/>
+                                                <rect key="frame" x="70.5" y="0.0" width="154" height="240"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AGy-kl-RZj">
-                                                <rect key="frame" x="100.5" y="376.5" width="94" height="383.5"/>
+                                                <rect key="frame" x="100.5" y="260" width="94" height="192"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Winner" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ls-XX-gK3">
+                                                <rect key="frame" x="94" y="472" width="107.5" height="288"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -112,8 +124,12 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Media" image="eyeglasses" catalog="system" id="i2x-lM-Mgy"/>
                     <connections>
+                        <outlet property="competitorLabelOne" destination="k68-t1-xNs" id="0c3-A1-gZB"/>
+                        <outlet property="competitorLabelTwo" destination="AGy-kl-RZj" id="Yum-Ox-DsC"/>
                         <outlet property="team1label" destination="k68-t1-xNs" id="wGp-MH-mgi"/>
                         <outlet property="team2label" destination="AGy-kl-RZj" id="iCt-Km-agR"/>
+                        <outlet property="winnerLabelOne" destination="u8e-if-3y7" id="FNz-Qn-HKP"/>
+                        <outlet property="winnerLabelTwo" destination="6ls-XX-gK3" id="Zkn-sP-8mf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0tv-LL-tp8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
