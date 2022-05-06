@@ -11,22 +11,34 @@ import Firebase
 
 class Tournament {
     
-    var schoolName: String = ""
+    var team: Robot = Robot(school: "", color: "", members: [""])
     var robotName: String = ""
-    var studentMembers: [String] = [""]
-    var color: String = ""
-    var school: [String : String] = ["": ""]
+    
     
     init()  {
         
     }
     
-    init(schoolName: String, robotName: String, studentMembers: [String],  color: String, team: [String: String]){
-        self.schoolName = schoolName
-        self.robotName = robotName
-        self.studentMembers = studentMembers
+    init(name: String, team: Robot){
+        self.robotName = name
+        self.team = team
+    }
+    
+}
+
+class Robot{
+    
+    var school: String = ""
+    var color: String = ""
+    var members: [String] = [""]
+    
+    init(){
+        
+    }
+    init(school: String, color: String, members: [String]){
+        self.school = school
         self.color = color
-        self.school = [schoolName: color]
+        self.members = members
     }
     
 }
