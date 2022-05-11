@@ -99,24 +99,22 @@ class Doorman: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         if tableView == self.doorTableView {
             cell.textLabel?.text = teamsArray[indexPath.row].robotName
-//            print(teamsArray[indexPath.row].team)
-//            teamsArray[indexPath.row].team.color = self.database.child(teamsArray[indexPath.row].robotName).child("Color").value as! String
-//            let c = teamsArray[indexPath.row].team.color
-//
-//            let R = CGFloat(Int(c.prefix(3))!)
-//            let G = CGFloat(Int(c[c.index(c.startIndex, offsetBy: 3)..<c.index(c.endIndex, offsetBy: -3)])!)
-//            let B = CGFloat(Int(c.suffix(3))!)
-//
-//            cell.backgroundConfiguration?.backgroundColor = .init(red: R/255, green: G/255, blue: B/255, alpha: 0.7)
+            let c = teamsArray[indexPath.row].team.color
+
+            let R = CGFloat(Int(c.prefix(3))!)
+            let G = CGFloat(Int(c[c.index(c.startIndex, offsetBy: 3)..<c.index(c.endIndex, offsetBy: -3)])!)
+            let B = CGFloat(Int(c.suffix(3))!)
+
+            cell.backgroundConfiguration?.backgroundColor = .init(red: R/255, green: G/255, blue: B/255, alpha: 0.7)
 
         } else if tableView == self.tableView {
             cell.textLabel?.text = teamsArray[indexPath.row + teamsArray.count/2].robotName
-//            let c = teamsArray[indexPath.row + teamsArray.count/2].team.color
-//            let R = CGFloat(Int(c.prefix(3))!)
-//            let G = CGFloat(Int(c[c.index(c.startIndex, offsetBy: 3)..<c.index(c.endIndex, offsetBy: -3)])!)
-//            let B = CGFloat(Int(c.suffix(3))!)
-//
-//            cell.backgroundConfiguration?.backgroundColor = .init(red: R/255, green: G/255, blue: B/255, alpha: 0.7)
+            let c = teamsArray[indexPath.row + teamsArray.count/2].team.color
+            let R = CGFloat(Int(c.prefix(3))!)
+            let G = CGFloat(Int(c[c.index(c.startIndex, offsetBy: 3)..<c.index(c.endIndex, offsetBy: -3)])!)
+            let B = CGFloat(Int(c.suffix(3))!)
+
+            cell.backgroundConfiguration?.backgroundColor = .init(red: R/255, green: G/255, blue: B/255, alpha: 0.7)
         }
         
         return cell
@@ -159,24 +157,23 @@ class Doorman: UIViewController, UITableViewDelegate, UITableViewDataSource {
                 
                 
                 self.database.child(name).observeSingleEvent(of: .value) { snap in
-                    
-                    for d in snap.children.allObjects as! [DataSnapshot] {
-                       
+                    let s = snap.children.allObjects as! [DataSnapshot]
+                    for d in 0..<s.count{
                         
-                        if d.key == "Color"{
-                            print(d.value(forKey: "Color")
+                        let k = s[d].key
+                        if k == "Color"{
+                            robotTeam.team.color = s[d].value as! String
+                        }else if k == "School"{
+                            robotTeam.team.school = s[d].value as! String
+                        }else if k == "Members"{
+                            if let m = s[d].value as? [String]{
+                                robotTeam.team.members = m
+                            }
                         }
-                        
                     
-//                        let members = d.value(forKey: "Members") as! [String]
-//                        let school = d.value(forKey: "School") as! String
-//
-//                        robotTeam.team.color = color
-//                        robotTeam.team.members = members
-//                        robotTeam.team.school = school
-                        
                         
                     }
+                    
                     
                 }
                 
