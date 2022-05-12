@@ -31,6 +31,19 @@ class Media: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         grabData()
+        self.team1Label.text = currentTeamsArray[0].robotName
+        self.team2label.text = currentTeamsArray[1].robotName
+        var m1 = String()
+        for i in 0..<self.currentTeamsArray[0].team.members.count{
+            m1 += (self.currentTeamsArray[0].team.members[i] + "\n")
+        }
+        var m2 = String()
+        for i in 0..<self.currentTeamsArray[1].team.members.count{
+            m2 += (self.currentTeamsArray[1].team.members[i] + "\n")
+        }
+        
+        self.competitorLabelOne.text = m1
+        self.competitorLabelTwo.text = m2
     }
 // MARK: - Functions and Actions
     @IBAction func mediaHelpButtonPressed(_ sender: Any) {
