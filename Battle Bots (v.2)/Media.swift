@@ -18,13 +18,19 @@ class Media: UIViewController {
     @IBOutlet weak var competitorLabelTwo: UILabel!
     
     let databaseWinners = Database.database().reference().child("Winners")
-    let databaseTournament = Database.database().reference().child("Tournament")
+    let database = Database.database().reference().child("Tournament")
     let databaseCurrent = Database.database().reference().child("Current")
     
-    // MARK: - viewDidLoad
+    var currentTeamsArray = [Tournament()]
+    var currentNameArray = [String()]
+    // MARK: - View Properties
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        grabData()
     }
 // MARK: - Functions and Actions
     @IBAction func mediaHelpButtonPressed(_ sender: Any) {
@@ -34,5 +40,49 @@ class Media: UIViewController {
         present(helpAlert, animated: true, completion: nil)
     }
     
+    func grabData() {
+        self.databaseCurrent.observeSingleEvent(of: .value) { snapshot in
+            for data in snapshot.children.allObjects as! [DataSnapshot] {
+                self.currentNameArray.append(data.key)
+            }
+        }
+        
+        self.database.observeSingleEvent(of: .value) { snapshot in
+            for data in snapshot.children.allObjects as! [DataSnapshot] {
+                let robotTeam = Tournament()
+                let name = data.key
+                
+                for n in 0..<self.currentNameArray.count {
+                    if self.currentNameArray[n] == name {
+                        robotTeam.robotName = name
+                        
+                        self.database.child(name).observeSingleEvent(of: .value) { snap in
+                            let s = snap.children.allObjects as! [DataSnapshot]
+                            for d in 0..<s.count{
+                                
+                                let k = s[d].key
+                                if k == "Color"{
+                                    robotTeam.team.color = s[d].value as! String
+                                }else if k == "School"{
+                                    robotTeam.team.school = s[d].value as! String
+                                }else if k == "Members"{
+                                    if let m = s[d].value as? [String]{
+                                        robotTeam.team.members = m
+                                    }
+                                }
+                            
+                                
+                            }
+                            
+                            
+                        }
+                    }
+                }
+                
+                
+                self.currentTeamsArray.append(robotTeam)
+            }
+        }
+    }
     
 }
