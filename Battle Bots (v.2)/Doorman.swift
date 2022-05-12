@@ -134,7 +134,7 @@ class Doorman: UIViewController, UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             let comp1 = teamsArray[indexPath.row].robotName
-            selectedTeams.insert(comp1, at: 0)
+            selectedTeams.append(teamsArray[indexPath.row].robotName)
             team1selected.text = selectedTeams[0]
             
             
