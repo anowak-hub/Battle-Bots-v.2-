@@ -31,7 +31,7 @@ class Media: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         grabData()
-        self.team1Label.text = currentTeamsArray[0].robotName
+        self.team1label.text = currentTeamsArray[0].robotName
         self.team2label.text = currentTeamsArray[1].robotName
         var m1 = String()
         for i in 0..<self.currentTeamsArray[0].team.members.count{
