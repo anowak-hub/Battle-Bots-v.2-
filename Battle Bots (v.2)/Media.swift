@@ -31,19 +31,8 @@ class Media: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         grabData()
-        self.team1label.text = currentTeamsArray[0].robotName
-        self.team2label.text = currentTeamsArray[1].robotName
-        var m1 = String()
-        for i in 0..<self.currentTeamsArray[0].team.members.count{
-            m1 += (self.currentTeamsArray[0].team.members[i] + "\n")
-        }
-        var m2 = String()
-        for i in 0..<self.currentTeamsArray[1].team.members.count{
-            m2 += (self.currentTeamsArray[1].team.members[i] + "\n")
-        }
-        
-        self.competitorLabelOne.text = m1
-        self.competitorLabelTwo.text = m2
+        print(currentNameArray)
+        print(currentTeamsArray)
     }
 // MARK: - Functions and Actions
     @IBAction func mediaHelpButtonPressed(_ sender: Any) {
@@ -54,10 +43,28 @@ class Media: UIViewController {
     }
     
     func grabData() {
-        self.databaseCurrent.observeSingleEvent(of: .value) { snapshot in
+        self.databaseCurrent.observeSingleEvent(of: .value) { [self] snapshot in
             for data in snapshot.children.allObjects as! [DataSnapshot] {
-                self.currentNameArray.append(data.key)
+                let name = data.value as! String
+                self.currentNameArray.append(name)
+                
             }
+            self.team1label.text = currentNameArray[0]
+            self.team2label.text = currentNameArray[1]
+           
+//            var m1 = String()
+//            for i in 0..<self.currentTeamsArray[0].team.members.count{
+//                m1 += (self.currentTeamsArray[0].team.members[i] + "\n")
+//            }
+//            var m2 = String()
+//            for i in 0..<self.currentTeamsArray[1].team.members.count{
+//                m2 += (self.currentTeamsArray[1].team.members[i] + "\n")
+//            }
+//
+//            self.competitorLabelOne.text = m1
+//            self.competitorLabelTwo.text = m2
+            
+            
         }
         
         self.database.observeSingleEvent(of: .value) { snapshot in
