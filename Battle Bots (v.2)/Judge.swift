@@ -81,7 +81,6 @@ class Judge: UIViewController {
             }
             }
             let lastIndex = self.currentTeams.count-1
-            print(lastIndex)
             self.team1Label.text = self.currentTeams[lastIndex-1]
             self.team2Label.text = self.currentTeams[lastIndex]
         }
