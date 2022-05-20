@@ -108,10 +108,7 @@ class Media: UIViewController {
     func getWinner() {
         self.databaseWinners.observeSingleEvent(of: .value) { snapshot in
             for data in snapshot.children.allObjects as! [DataSnapshot] {
-                let winner = Tournament()
                 let winnerName = data.value as! String
-                
-                winner.robotName = winnerName
                 
                 self.winnerNameArray.append(winnerName)
                 print("\(self.winnerNameArray)")
