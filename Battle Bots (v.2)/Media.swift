@@ -106,7 +106,7 @@ class Media: UIViewController {
     }
     
     func getWinner() {
-        winnerNameArray = [""]
+        winnerNameArray = []
         print("\(self.winnerNameArray)")
         self.databaseWinners.observeSingleEvent(of: .value) { snapshot in
             for data in snapshot.children.allObjects as! [DataSnapshot] {

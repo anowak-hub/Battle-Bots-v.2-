@@ -19,7 +19,7 @@ class Judge: UIViewController {
     let databaseCurrentTeams = Database.database().reference().child("Current")
     let databaseWinners = Database.database().reference().child("Winners")
     var currentTeams: [String] = []
-    var winnersArray: [String] = []
+    var winnersArray = [String()]
     
 // MARK: - viewDidLoad
     override func viewDidLoad() {
