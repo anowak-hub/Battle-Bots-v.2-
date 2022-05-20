@@ -33,8 +33,6 @@ class Media: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         grabData()
         getWinner()
-        print(currentNameArray)
-        print(currentTeamsArray)
     }
 // MARK: - Functions and Actions
     @IBAction func mediaHelpButtonPressed(_ sender: Any) {
@@ -111,7 +109,6 @@ class Media: UIViewController {
         self.databaseWinners.observeSingleEvent(of: .value) { snapshot in
             for data in snapshot.children.allObjects as! [DataSnapshot] {
                 let winnerName = data.value as! String
-                self.winnerNameArray.append(winnerName)
                 print(self.winnerNameArray)
                 
                 self.winnerNameArray.append(winnerName)
