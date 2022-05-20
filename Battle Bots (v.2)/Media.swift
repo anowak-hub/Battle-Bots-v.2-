@@ -23,7 +23,7 @@ class Media: UIViewController {
     
     var currentTeamsArray = [Tournament()]
     var currentNameArray = [String()]
-    var winnerNameArray = [String()]
+    var winnerNameArray: [String] = []
     // MARK: - View Properties
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -108,16 +108,20 @@ class Media: UIViewController {
     func getWinner() {
         self.databaseWinners.observeSingleEvent(of: .value) { snapshot in
             for data in snapshot.children.allObjects as! [DataSnapshot] {
+                let winner = Tournament()
                 let winnerName = data.value as! String
-                print(self.winnerNameArray)
+                
+                winner.robotName = winnerName
                 
                 self.winnerNameArray.append(winnerName)
+                print("\(self.winnerNameArray)")
+                
         }
     }
-        if self.team1label.text! == winnerNameArray[1] {
+        if self.team1label.text! == winnerNameArray[0] {
             winnerLabelOne.alpha = 1
         }
-        else if self.team2label.text! == winnerNameArray[1] {
+        else if self.team2label.text! == winnerNameArray[0] {
             winnerLabelTwo.alpha = 1
         }
         else {
