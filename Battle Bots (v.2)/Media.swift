@@ -111,16 +111,16 @@ class Media: UIViewController {
         self.databaseWinners.observeSingleEvent(of: .value) { snapshot in
             for data in snapshot.children.allObjects as! [DataSnapshot] {
                 let winnerName = data.value as! String
-                self.winnerArray.append(winnerName)
-                print(self.winnerArray)
+                self.winnerNameArray.append(winnerName)
+                print(self.winnerNameArray)
                 
                 self.winnerNameArray.append(winnerName)
         }
     }
-        if self.team1label.text! == winnerArray[1] {
+        if self.team1label.text! == winnerNameArray[1] {
             winnerLabelOne.alpha = 1
         }
-        else if self.team2label.text! == winnerArray[1] {
+        else if self.team2label.text! == winnerNameArray[1] {
             winnerLabelTwo.alpha = 1
         }
         else {
