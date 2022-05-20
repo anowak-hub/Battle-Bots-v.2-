@@ -113,13 +113,13 @@ class Media: UIViewController {
                 
                 let winnerName = data.value as! String
                 self.winnerArray.append(winnerName)
+                print(self.winnerArray)
         }
     }
-        print(self.winnerArray)
-        if self.team1label.text! == winnerArray[0] {
+        if self.team1label.text! == winnerArray[1] {
             winnerLabelOne.alpha = 1
         }
-        else if self.team2label.text! == winnerArray[0] {
+        else if self.team2label.text! == winnerArray[1] {
             winnerLabelTwo.alpha = 1
         }
         else {
