@@ -113,20 +113,19 @@ class Media: UIViewController {
                 
                 self.winnerNameArray.append(winnerName)
                 print("\(self.winnerNameArray)")
-                if self.winnerNameArray.count == 2 {
-                    break
-                }
         }
     }
-        if self.team1label.text! == winnerNameArray[0] {
-            winnerLabelOne.alpha = 1
-        }
-        else if self.team2label.text! == winnerNameArray[0] {
-            winnerLabelTwo.alpha = 1
-        }
-        else {
-            winnerLabelOne.alpha = 0
-            winnerLabelTwo.alpha = 0
+        for item in winnerNameArray {
+            if item == team1label.text {
+                winnerLabelOne.alpha = 1
+            }
+            else if item == team2label.text {
+                winnerLabelTwo.alpha = 1
+            }
+            else {
+                winnerLabelOne.alpha = 0
+                winnerLabelTwo.alpha = 0
+            }
         }
     }
 }
