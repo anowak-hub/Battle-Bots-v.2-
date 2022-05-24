@@ -106,14 +106,13 @@ class Media: UIViewController {
     }
     
     func getWinner() {
-        winnerNameArray = []
         print("\(self.winnerNameArray)")
         self.databaseWinners.observeSingleEvent(of: .value) { snapshot in
             for data in snapshot.children.allObjects as! [DataSnapshot] {
                 let winnerName = data.value as! String
                 
                 self.winnerNameArray.append(winnerName)
-                
+                print("\(self.winnerNameArray)")
                 if self.winnerNameArray.count == 2 {
                     break
                 }
