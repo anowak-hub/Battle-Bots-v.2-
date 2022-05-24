@@ -84,4 +84,7 @@ class Judge: UIViewController {
             self.team2Label.text = self.currentTeams[lastIndex]
         }
     }
+    @IBAction func clearButton(_ sender: UIButton) {
+        
+    }
 }
