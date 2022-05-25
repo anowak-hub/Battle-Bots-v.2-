@@ -86,4 +86,7 @@ class Judge: UIViewController {
             }
         }
     }
+    @IBAction func clearButton(_ sender: UIButton) {
+        
+    }
 }
