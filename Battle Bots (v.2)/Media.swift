@@ -49,9 +49,10 @@ class Media: UIViewController {
                 self.currentNameArray.append(name)
                 
             }
-            self.team1label.text = currentNameArray[1]
-            self.team2label.text = currentNameArray[2]
-           
+            if currentNameArray != [] || currentNameArray != [""] {
+                self.team1label.text = currentNameArray[1]
+                self.team2label.text = currentNameArray[2]
+            }
 //            var m1 = String()
 //            for i in 0..<self.currentTeamsArray[0].team.members.count{
 //                m1 += (self.currentTeamsArray[0].team.members[i] + "\n")
